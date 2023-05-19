@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Личный кабинет</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="cabinet">
+        <h1 class="sr-only">Информация о пользователе</h1>
+        <div class="container">
+          <div class="cabinet__inner">
+            <aside class="aside-menu cabinet__menu">
+              <div class="aside-menu__scroll">
+                <h2 class="aside-menu__title cabinet__menu-title">Виктория</h2>
+                <ul class="aside-menu__items">
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#my-data">ЛИЧНЫЕ ДАННЫЕ</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#my-pets">МОИ ПИТОМЦЫ</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#my-receiving">
+                      ЗАПИСЬ НА ПРИЕМ 
+                      <span class="cabinet__menu-num">1</span>
+                    </a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#">ВЫЙТИ</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <div class="cabinet__content">
+              <section class="my-data" id="my-data">
+                <h2 class="cabinet__title">Личные данные</h2>
+                <article class="card">
+                  <h3 class="sr-only">Информация о пользоватаеле</h3>
+                  <div class="card__left">
+                    <img class="card__photo" src="../images/avatars/not-ava.jpg" alt="avatar" width="130" height="130">
+                    <a class="card__link" href="#">изменить</a>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">имя</dt>
+                        <dd class="card__info">Виктория</dd>
+                        <dt class="card__category">фамилия</dt>
+                        <dd class="card__info">Иванова</dd>
+                        <dt class="card__category">отчетсво</dt>
+                        <dd class="card__info">Александровна</dd>
+                        <dt class="card__category">телефон</dt>
+                        <dd class="card__info"><a href="tel:89995981245">+8 999 598-12-45</a></dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">О себе</dt>
+                        <dd class="card__info">
+                          Живу в Волгограде, очень люблю животных! Мечтаю завести много зверей и построить приют. Пока что у меня собака, кошка и рыбки :)
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+              </section>
+              <section class="my-pets" id="my-pets">
+                <h2 class="cabinet__title">Мои питомцы</h2>
+                <a class="cabinet__new-pet" href="#">ДОБАВИТЬ НОВОГО ПИТОМЦА</a>
+                <article class="card my-pets__card">
+                  <div class="card__left">
+                    <img class="card__photo" src="../images/avatars/pet1.jpg" alt="avatar" width="130" height="130">
+                    <a class="card__link" href="#">изменить</a>
+                  </div>
+                  <div class="card__right">
+                    <h3 class="card__title">Громопетр</h3>
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">тип</dt>
+                        <dd class="card__info">Собака</dd>
+                        <dt class="card__category">пол</dt>
+                        <dd class="card__info">Мужской</dd>
+                        <dt class="card__category">порода</dt>
+                        <dd class="card__info">Без породы</dd>
+                        <dt class="card__category">возраст</dt>
+                        <dd class="card__info">1 год 2 месяца</dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">медицинская карта</dt>
+                        <dd class="card__info">
+                          <a class="card__file card__file--med" href="#">
+                            <span class="card__file-name">10255</span>
+                            <span class="card__data">
+                              обновлена
+                              <time datetime="2023-06-25">25.06.2023</time>
+                            </span>
+                          </a>
+                        </dd>
+                        <dt class="card__category">результаты анализов</dt>
+                        <dd class="card__info">
+                        <div class="swiper card__result">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">10255</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">ОАК</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Узи брюшной полости</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Биохимия крови</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        <div class="card__result-btn card__result-btn--prev slider-btn slider-btn--prev swiper-button-prev"></div>
+                        <div class="card__result-btn card__result-btn--next slider-btn slider-btn--next swiper-button-next"></div>
+                        </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+                <article class="card my-pets__card">
+                  <div class="card__left">
+                    <img class="card__photo" src="../images/avatars/pet2.jpg" alt="avatar" width="130" height="130">
+                    <a class="card__link" href="#">изменить</a>
+                  </div>
+                  <div class="card__right">
+                    <h3 class="card__title">Имя питомца</h3>
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">тип</dt>
+                        <dd class="card__info">Кошка</dd>
+                        <dt class="card__category">пол</dt>
+                        <dd class="card__info">Женский</dd>
+                        <dt class="card__category">порода</dt>
+                        <dd class="card__info">Русская голубая</dd>
+                        <dt class="card__category">возраст</dt>
+                        <dd class="card__info">4 месяца</dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">медицинская карта</dt>
+                        <dd class="card__info">
+                          Медицинскую карту заводят при первом посещении клиники и обновляют при каждом обращении. Здесь вы сможете посмотреть и скачать актуальную карту в формате pdf
+                        </dd>
+                        <dt class="card__category">результаты анализов</dt>
+                        <dd class="card__info">Пока нет готовых анализов</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+              </section>
+              <section class="my-receiving" id="my-receiving">
+                <h2 class="cabinet__title">Запись на прием</h2>
+                <article class="card">
+                  <h3 class="sr-only">Информация о враче</h3>
+                  <div class="card__left">
+                    <img class="card__photo" src="../images/avatars/ava1.jpg" alt="avatar" width="130" height="130">
+                    <a class="card__link" href="#">отменить прием</a>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">врач</dt>
+                        <dd class="card__info">Иванова Ирина Владимировна</dd>
+                        <dt class="card__category">ветклиника</dt>
+                        <dd class="card__info">Айболит на Краснополянской</dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">питомец</dt>
+                        <dd class="card__info">Громопетр</dd>
+                        <dt class="card__category">дата</dt>
+                        <dd class="card__info"><time datetime="2019-10-15">15.10.19</time></dd>
+                        <dt class="card__category">время</dt>
+                        <dd class="card__info"><time>15:45</time></dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

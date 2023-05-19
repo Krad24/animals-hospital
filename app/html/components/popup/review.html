@@ -1,0 +1,21 @@
+<div class="popup" id="popup-review">
+  <!-- add class "review-popup--message" when message use --> 
+  <div class="popup__content review-popup"> 
+    <button class="popup__close review-popup__close" type="button">
+      <svg class="popup__close-img" width="20" height="20">
+        <use xlink:href="images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+    <h2 class="review-popup__title">Оставить отзыв</h2>
+    <form class="review-popup__form" action="#">
+      <label class="review-popup__lable">
+        <textarea class="review-popup__textarea" name="review" placeholder="Отзыв" required></textarea>
+        <span class="sr-only">Оставте ваш отзыв</span>
+      </label>
+      <button class="order-link review-popup__btn" type="submit" disabled>ОТПРАВИТЬ</button>
+    </form>
+    <!-- <p class="review-popup__message">
+      Спасибо! Мы рассмотрим Ваш отзыв и опубликуем его в ближайшее время
+    </p> -->
+  </div>
+</div>

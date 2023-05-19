@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Выбор записи к врачу</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="breadcrumbs">
+          <div class="container">
+            <a class="link breadcrumbs__link" href="#">назад</a>
+          </div>
+      </div>
+      <section class="enroll">
+        <div class="container">
+          <div class="enroll__inner">
+            <h1 class="enroll__title">Запись<br>на прием</h1>
+            <ul class="enroll__items">
+              <li class="enroll__item">
+                <a class="enroll__link" href="design.html">
+                  <span class="enroll__text">Онлайн-консультация</span>
+                  <span class="enroll__price">2000<span>$</span></span>
+                </a>
+              </li>
+              <li class="enroll__item">
+                <a class="enroll__link" href="design.html">
+                  <span class="enroll__text">Прием в клинике</span>
+                  <span class="enroll__price">Бесплатно</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

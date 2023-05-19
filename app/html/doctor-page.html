@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Информация и отзывы о враче</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <a class="link breadcrumbs__link" href="#">назад</a>
+        </div>
+      </div>
+      <div class="doctor">
+        <div class="container">
+          <h1 class="sr-only">Информация о докторе</h1>
+          <div class="doctor__inner">
+            <aside class="doctor__menu">
+              <img class="doctor__menu-img" src="../images/avatars/doctor.png" alt="photo">
+              <span class="doctor__menu-date">
+                ближайшая дата приема:<time datetime="2019-08-29">29.08.19</time>
+              </span>
+              <a class="order-link doctor__menu-link" href="enroll.html">ЗАПИСАТЬСЯ</a>
+              <button class="doctor__menu-btn" type="button" id="reviewBtn">ОСТАВИТЬ ОТЗЫВ</button>
+            </aside>
+            <div class="doctor__content">
+              <section class="doctor-info">
+                <h2 class="doctor__title">Иванова Анастасия Андреевна</h2>
+                <span class="doctor-info__desc">стаж 10 лет</span>
+                <p class="doctor-info__text">
+                  Терапия, УЗИ-диагностика, хирургия, ортопедия
+                </p>
+                <p class="doctor-info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                </p>
+                <h3 class="doctor-info__courses">Пройденные курсы</h3>
+                <div class="swiper doctor-info__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2015</time>
+                      <span class="doctor-info__slider-name">Повышение квалификации</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2015</time>
+                      <span class="doctor-info__slider-name">Название курса</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2015</time>
+                      <span class="doctor-info__slider-name">Международная конференция Конференция</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2015</time>
+                      <span class="doctor-info__slider-name">Обучение по направлению хирургия</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2012</time>
+                      <span class="doctor-info__slider-name">Повышение квалификации</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2015</time>
+                      <span class="doctor-info__slider-name">Обучение по направлению хирургия</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2010</time>
+                      <span class="doctor-info__slider-name">Повышение квалификации</span>
+                    </div>
+                    <div class="swiper-slide doctor-info__slider-item">
+                      <time class="doctor-info__slider-date">2007</time>
+                      <span class="doctor-info__slider-name">Название курса</span>
+                    </div>
+                  </div>
+                  <div class="slider-btn slider-btn--prev swiper-button-prev"></div>
+                  <div class="slider-btn slider-btn--next swiper-button-next"></div>
+                </div>
+              </section>
+              <section class="reviews">
+                <h2 class="doctor__title">Отзывы</h2>
+                <div class="reviews__inner">
+                  <span class="reviews__desc">стаж 10 лет</span>
+                  <ul class="pagination">
+                    <li class="pagination__item">
+                      <a class="pagination__link pagination__link--active" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item pagination__item--dots">...</li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">13</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="reviews__items">
+                  <li class="reviews__item">
+                    <article class="reviews__card">
+                      <h3 class="sr-only">Коментарий пользователя</h3>
+                      <img class="reviews__photo" src="../images/avatars/not-ava.png" alt="avatar" width="130" height="130">
+                      <img class="reviews__emoji" src="../images/icon/emoji/1.png" alt="">
+                      <div class="reviews__wrapper">
+                        <div class="reviews__comment">
+                          <span class="reviews__category">пользователь</span>
+                          <a class="reviews__name" href="#">Виктория</a>
+                          <span class="reviews__category">отзыв</span>
+                          <blockquote class="reviews__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Lorem ip
+                          </blockquote>
+                        </div>
+                        <div class="reviews__answer">
+                          <img class="reviews__photo-ava" src="../images/avatars/ava1.png" alt="avatar" width="75" height="75">
+                          <div class="reviews__answer-inner">
+                            <span class="reviews__category">ответ</span>
+                            <blockquote class="reviews__text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="reviews__item">
+                    <article class="reviews__card">
+                      <h3 class="sr-only">Коментарий пользователя</h3>
+                      <img class="reviews__photo" src="../images/avatars/ava7.png" alt="avatar" width="130" height="130">
+                      <img class="reviews__emoji" src="../images/icon/emoji/2.png" alt="">
+                      <div class="reviews__wrapper">
+                        <div class="reviews__comment">
+                          <span class="reviews__category">пользователь</span>
+                          <a class="reviews__name" href="#">Виктория</a>
+                          <span class="reviews__category">отзыв</span>
+                          <blockquote class="reviews__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Lorem ip
+                          </blockquote>
+                        </div>
+                        <div class="reviews__answer">
+                          <img class="reviews__photo-ava" src="../images/avatars/ava1.png" alt="avatar" width="75" height="75">
+                          <div class="reviews__answer-inner">
+                            <span class="reviews__category">ответ</span>
+                            <blockquote class="reviews__text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="reviews__item">
+                    <article class="reviews__card">
+                      <h3 class="sr-only">Коментарий пользователя</h3>
+                      <img class="reviews__photo" src="../images/avatars/ava8.png" alt="avatar" width="130" height="130">
+                      <img class="reviews__emoji" src="../images/icon/emoji/3.png" alt="">
+                      <div class="reviews__wrapper">
+                        <div class="reviews__comment">
+                          <span class="reviews__category">пользователь</span>
+                          <a class="reviews__name" href="#">Виктория</a>
+                          <span class="reviews__category">отзыв</span>
+                          <blockquote class="reviews__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Lorem ip
+                          </blockquote>
+                        </div>
+                        <div class="reviews__answer">
+                          <img class="reviews__photo-ava" src="../images/avatars/ava1.png" alt="avatar" width="75" height="75">
+                          <div class="reviews__answer-inner">
+                            <span class="reviews__category">ответ</span>
+                            <blockquote class="reviews__text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="reviews__item">
+                    <article class="reviews__card">
+                      <h3 class="sr-only">Коментарий пользователя</h3>
+                      <img class="reviews__photo" src="../images/avatars/ava9.png" alt="avatar" width="130" height="130">
+                      <img class="reviews__emoji" src="../images/icon/emoji/4.png" alt="">
+                      <div class="reviews__wrapper">
+                        <div class="reviews__comment">
+                          <span class="reviews__category">пользователь</span>
+                          <a class="reviews__name" href="#">Виктория</a>
+                          <span class="reviews__category">отзыв</span>
+                          <blockquote class="reviews__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Lorem ip
+                          </blockquote>
+                        </div>
+                        <div class="reviews__answer">
+                          <img class="reviews__photo-ava" src="../images/avatars/ava1.png" alt="avatar" width="75" height="75">
+                          <div class="reviews__answer-inner">
+                            <span class="reviews__category">ответ</span>
+                            <blockquote class="reviews__text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+    @include('./components/popup/review.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

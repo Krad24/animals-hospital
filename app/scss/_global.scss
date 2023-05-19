@@ -1,0 +1,85 @@
+body {
+  height: 100%;
+  font-weight: 400;
+  font-family: 'Futura New';
+  font-size: 20px;
+  line-height: 1.5;
+  color: $color;
+  background-color: #FFFEFE;
+
+  @include r($md) {
+    font-size: 18px;
+  }
+
+  @include r($sm) {
+    font-size: 16px;
+  }
+
+  &.lock {
+    overflow-y: hidden;
+    position: relative;
+
+    .header {
+      background-color: transparent;
+    }
+
+    .header__btn {
+      color: inherit;
+      z-index: -1;
+    }
+
+    .header__logo {
+      z-index: -1;
+    }
+    
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(8,6,6,.2);
+      z-index: 2;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow-x: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.big-container {
+  max-width: 1790px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+

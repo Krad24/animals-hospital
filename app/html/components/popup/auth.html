@@ -1,0 +1,38 @@
+<div class="popup" id="auth-popup">
+  <div class="popup__content auth">
+    <button class="popup__close" type="button">
+      <svg class="popup__close-img" width="20" height="20">
+        <use xlink:href="images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+    <span class="popup__title auth__title">Вход или регистрация</span>
+    <form class="auth__form" action="#">
+
+      <!-- <label class="phone auth__lable">
+        <input class="phone__input" required type="text">
+        <span class="phone__placeholder"><span>+8 (</span>999) 999 99 99</span>
+        <span class="sr-only">Введите ваш номер телефона</span>
+      </label>
+      <button class="order-link auth__btn" type="button">ДАЛЕЕ</button> -->
+
+      <div class="auth__code">
+        <label class="auth__code-lable">
+          <input class="auth__code-input" type="text" name="num-1" required>
+        </label>
+        <label class="auth__code-lable">
+          <input class="auth__code-input" type="text" name="num-2" required>
+        </label>
+        <label class="auth__code-lable">
+          <input class="auth__code-input" type="text" name="num-3" required>
+        </label>
+        <label class="auth__code-lable">
+          <input class="auth__code-input" type="text" name="num-4" required>
+        </label>
+      </div>
+      <span class="auth__timer" id="timer-auth">00:59</span>
+      <button class="order-link auth__btn" type="submit" disabled>ГОТОВО</button>
+      <button class="auth__btn-back" type="button">НАЗАД</button>
+    </form>
+    <!-- <a class="auth__link" href="#">ПРОДОЛЖИТЬ БЕЗ РЕГИСТРАЦИИ</a> -->
+  </div>
+</div>

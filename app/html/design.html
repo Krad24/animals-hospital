@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Cтраница для оформления заказа</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="breadcrumbs">
+          <div class="container">
+            <a class="link breadcrumbs__link" href="#">назад</a>
+          </div>
+      </div>
+      <section class="design">
+        <div class="container">
+          <div class="design__inner">
+            <h1 class="design__title">Оформление заказа</h1>
+            <form class="design__form" action="#">
+              <label class="design__label">
+                <input class="form-input" type="text" placeholder="ФИО" name="FIO" required>
+                <span class="sr-only">Введите вашу фамилию</span>
+              </label>
+              <div class="design__wrapper">
+                <div class="design__wrapper-item">
+                  <label class="phone design__label">
+                    <input class="phone__input form-input" type="text" name="phone" required>
+                    <span class="phone__placeholder"><span>+8 (</span>999) 999 99 99</span>
+                    <span class="sr-only">Введите ваш номер телефона</span>
+                  </label>
+                </div>
+                <div class="design__wrapper-item">
+                  <label class="design__label">
+                    <input class="form-input" type="text" name="date" placeholder="Желаемая дата и время приема" required>
+                    <span class="sr-only">Введите желаемую дату и время визита</span>
+                  </label>
+                </div>
+              </div>
+              <label class="sr-only" for="design__textarea">Краткое описание проблемы</label>
+              <textarea class="design__textarea" name="textarea" placeholder="Кратко опишите проблему" id="design__textarea" required></textarea>
+              <!-- <button class="order-link design__btn" type="submit">ЗАПИСАТЬСЯ</button> -->
+              <div class="pay">
+                <div class="pay__inner">
+                  <label class="pay__card">
+                    <input class="form-input pay__card-input" type="text" name="card" placeholder="Оплата банковской картой" required>
+                  </label>
+                  <div class="pay__captcha">
+                    <img class="pay__captcha-img" src="../images/captcha.jpg" alt="текст капчи" width="209" height="57">
+                    <label class="pay__captcha-lable">
+                      <input class="form-input pay__captcha-input" type="text" name="captcha" placeholder="Введите текст" required>
+                    </label>
+                  </div>
+                </div>
+                <p class="pay__text">
+                  Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей политика конфиденциальности.
+                </p>
+                <button class="order-link pay__btn" type="submit" disabled>ОПЛАТИТЬ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

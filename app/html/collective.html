@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Коллектив больницы</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="breadcrumbs">
+          <div class="container">
+            <a class="link breadcrumbs__link" href="#">назад</a>
+          </div>
+      </div>
+      <div class="collective">
+        <div class="container">
+          <div class="collective__inner">
+            <aside class="aside-menu collective__menu">
+              <div class="aside-menu__scroll">
+                <h1 class="aside-menu__title">Коллектив</h1>
+                <ul class="aside-menu__items collective__menu-items">
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#about">О НАС</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#specialist">СПЕЦИАЛИСТЫ</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <div class="collective__content">
+              <img class="collective__img" src="../images/collective/group.jpg" alt="group photo" width="909" height="470">
+              <article class="blog-article" id="about">
+                <h2>О нас</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </p>
+              </article>
+              <article class="collective__specialist" id="specialist">
+                <h2 class="collective__title">Специалисты</h2>
+                <div class="collective__specialist-inner">
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava2.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 10 лет</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">врач</dt>
+                          <dd class="card__info">
+                            Иванова Анастасия Андреевна
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Терапия, УЗИ-диагностика, хирургия, ортопедия, лаборатория
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava3.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 5 лет</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">врач</dt>
+                          <dd class="card__info">
+                            Константинопольский Константин Константинович
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Врач общей практики
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava4.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 4 лет</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">ассистент ветеринарного врача</dt>
+                          <dd class="card__info">
+                            Иванова Анастасия Андреевна
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Анестезиология, стоматология, лаборатория
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava5.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 8 месяцев</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">ординатор</dt>
+                          <dd class="card__info">
+                            Константинопольский Константин Константинович
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Врач общей практики
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava6.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 1 год</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">врач</dt>
+                          <dd class="card__info">
+                            Иванова Анастасия Андреевна
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Терапия, УЗИ-диагностика, хирургия, ортопедия, лаборатория
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava3.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 5 лет</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">врач</dt>
+                          <dd class="card__info">
+                            Константинопольский Константин Константинович
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Врач общей практики
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava4.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 4 лет</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">ассистент ветеринарного врача</dt>
+                          <dd class="card__info">
+                            Иванова Анастасия Андреевна
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Анестезиология, стоматология, лаборатория
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                  <a class="collective__link" href="doctor-page.html">
+                    <article class="card collective__card">
+                      <h3 class="sr-only">Информация о работнике</h3>
+                      <div class="card__left collective__card-left">
+                        <img class="card__photo collective__card-photo" src="../images/avatars/ava5.png" alt="avatar" width="130" height="130">
+                        <span class="card__link collective__experience">стаж 8 месяцев</span>
+                      </div>
+                      <div class="card__right">
+                        <dl class="card__items">
+                          <dt class="card__category collective__category">ординатор</dt>
+                          <dd class="card__info">
+                            Константинопольский Константин Константинович
+                          </dd>
+                          <dt class="card__category collective__category">специализация</dt>
+                          <dd class="card__info">
+                            Врач общей практики
+                          </dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

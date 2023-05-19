@@ -1,0 +1,4395 @@
+@import "reset";
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "libs";
+@import "global";
+
+
+.phone {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  background: #FFFFFF;
+
+  &__input {
+    font-family: 'Futura New';
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid #EDE9E8;
+    border-radius: 20px;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #59443F;
+
+    @include r($md) {
+      font-size: 18px;
+    }
+  
+    @include r($sm) {
+      font-size: 16px;
+    }
+
+    &:invalid+.phone__placeholder {
+      display: inline;
+    }
+  }
+
+  &__placeholder {
+    font-family: 'Futura New';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.25;
+    left: 16px;
+    position: absolute;
+    top: 17px;
+    display: none;
+    width: 100%;
+    text-align: left;
+    padding-right: 32px;
+    color: #C3B9B5;
+    @include line-clamp;
+
+    @include r($md) {
+      font-size: 18px;
+      top: 19px;
+    }
+  
+    @include r($sm) {
+      font-size: 16px;
+      top: 21px;
+    }
+
+    span {
+      color: #59443F;
+    }
+  }
+}
+
+.link {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: #FFC59E;
+  padding-right: 19px;
+  position: relative;
+
+  @include r($lg) {
+    padding: 12px 19px 12px 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 7px;
+    height: 12px;
+    background-image: url("../images/icon/arrow.svg");
+    @include bg;
+    margin: auto 0;
+  }
+}
+
+.breadcrumbs {
+  padding: 65px 0 50px;
+
+  @include r($xl) {
+    text-align: center;
+  }
+
+  @include r($md) {
+    padding: 30px 0;
+  }
+
+  &__link {
+    padding: 10px 0 10px 23px;
+    margin-left: 550px;
+    transition: color .5s;
+
+    @include r($xl) {
+      margin-left: 0;
+    }
+
+    &::after {
+      right: auto;
+      left: 0;
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      color: #59443f;
+    }
+  }
+}
+
+
+.logo {
+  padding: 19px 10px;
+
+  svg {
+    width: 80px;
+    height: 63px;
+    fill: #59443F;
+  }
+}
+
+.menu {
+  display: flex;
+
+  @include r($xl) {
+    display: block;
+    width: 100%;
+  }
+
+  &__item {
+    padding: 40px 0;
+
+    &:not(&:last-child) {
+      margin-right: 80px;
+    }
+
+    @include r($xxxl) {
+      &:not(&:last-child) {
+        margin-right: 50px;
+      }
+    }
+
+    @include r($xxl) {
+      &:not(&:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    @include r($xl) {
+      padding: 0;
+
+      &:not(&:last-child) {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #C3B9B5;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 20px;
+    font-family: 'Futura New';
+    transition: color .3s;
+
+    @include r($xl) {
+      padding: 12px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+      color: #59443F;
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    overflow: hidden;
+
+    @include mr($xl) {
+      &:hover {
+        overflow: visible;
+        z-index: 20;
+
+        .menu__dropdown-items {
+          opacity: 1;
+          
+          @include r($xl) {
+            position: relative;
+          }
+        }
+
+        .menu__dropdown-btn {
+          color: #59443F;
+        }
+      }
+    }
+  }
+
+  &__dropdown-btn {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__dropdown-items {
+    position: absolute;
+    left: -60px;
+    top: 75px;
+    background-color: #FFFFFF;
+    width: 300px;
+    box-shadow: 2px 2px 20px rgba(155, 82, 50, 0.1);
+    border-radius: 20px;
+    padding: 40px 50px;
+    opacity: 0;
+    transition: opacity .3s;
+    max-height: 400px;
+    overflow: auto;
+
+    &--active {
+      position: relative;
+      opacity: 1;
+    }
+
+    @include r($xl) {
+      left: 0;
+      right: 0;
+      top: 5px;
+      max-width: 400px;
+      width: 100%;
+      max-height: 250px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  }
+
+  &__dropdown-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include r($xl) {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__dropdown-link {
+    font-family: 'Futura New';
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    color: #080606;
+    text-transform: none;
+
+    @include r($xl) {
+      padding: 7px 0;
+    }
+
+    &:hover {
+      font-weight: 500;
+      text-indent: 10px;
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+
+      @include r($xl) {
+        margin-right: 30px;
+      }
+
+      @include r($lg) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    display: block;
+
+    @include r($xl) {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      fill: #C3B9B5;
+      transition: fill .3s;
+
+      &:hover {
+        fill: #59443F;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.order-link {
+  font-family: 'Futura New';
+  font-weight: 700;
+  background-color: #FFC59E;
+  box-shadow: 0 4px 20px #FFC59E;
+  border-radius: 33.5px;
+  display: block;
+  padding: 24px;
+  max-width: 285px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: #FFFFFF;
+  text-align: center;
+  transition: background-color .3s, box-shadow .3s;
+
+  @include r($sm) {
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  &:hover {
+    background-color: #59443F;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  &:disabled {
+    background-color: #EDE9E8;
+    box-shadow: none;
+  }
+}
+
+.slider-pagination {
+  display: none;
+
+  @include r($lg) {
+    display: block;
+    
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.slider-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #FFC59E;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: #FFFFFF;
+  transition: box-shadow .5s;
+
+  @include r($lg) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &::after {
+    font-size: 12px;
+    transition: color .3s;
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 10px rgba(155, 82, 50, 0.5);
+
+    &::after {
+      color: #59443F;
+    }
+  }
+}
+
+.shops {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    padding: 2px 0;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include r($m) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+}
+
+.service {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+  min-height: 220px;
+  position: relative;
+  border: 1px solid transparent;
+  transition: border .3s;
+
+  &:hover {
+    border: 1px solid #C3B9B5;
+
+    .service__icon {
+      fill: #59443F;
+      stroke: #59443F;
+    }
+  }
+
+  @include r($sm) {
+    padding: 18px;
+  }
+
+  &__name {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    z-index: 1;
+    @include line-clamps(30, 1.3, 2);
+
+    @include r($sm) {
+      @include line-clamps(24, 1.3, 2);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    fill: #FFC59E;
+    stroke: #FFC59E;
+    transition: fill .4s, stroke .4s;
+
+    @include r($sm) {
+      width: 90px;
+      height: 90px;
+      bottom: 18px;
+      right: 18px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+.popup {
+  display: none;
+
+  &--active {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(8, 6, 6, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 21;
+  }
+
+
+  &__content {
+    color: #080606;
+    max-width: 400px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    background-color: #FFFEFE;
+    box-shadow: 2px 2px 20px rgba(155, 82, 50, 0.1);
+    border-radius: 20px;
+    position: relative;
+    z-index: 22;
+    animation: pop 1s;
+
+    @include r($lg) {
+      animation: opac .4s;
+    }
+
+    @include r($sm) {
+      margin: 0 10px;
+      padding: 50px 25px;
+    }
+  }
+
+  @keyframes pop {
+    from {
+      transform: scale(.5);
+    }
+
+    to {
+      transform: scale(1);
+
+    }
+  }
+
+  @keyframes opac {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 28px;
+    display: block;
+
+    @include r($md) {
+      font-size: 26px;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__items {
+    @include v($vsm) {
+      max-height: 200px;
+      overflow: auto;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    @include r($md) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 12px;
+    font-family: "Futuraa New";
+    font-weight: 400;
+    line-height: 1;
+    transition: color .3s;
+    font-size: 20px;
+
+    &:hover {
+      color: #FFC59E;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 44px;
+    height: 44px;
+    stroke: #C3B9B5;
+    transition: stroke .5s;
+
+    &:hover {
+      stroke: #080606;
+    }
+  }
+}
+
+
+
+.auth {
+  padding: 50px 30px;
+
+  @include v($vm) {
+    padding: 30px;
+  }
+
+  &__title {
+    width: 200px;
+    margin: 0 auto 32px;
+
+    @include r($md) {
+      margin-bottom: 25px;
+    }
+
+    @include r($sm) {
+      width: 100%;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__lable {
+    margin-bottom: 32px;
+
+    @include r($md) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__btn {
+    background-color: #EDE9E8;
+    box-shadow: none;
+    margin: 0 auto;
+
+    @include r($md) {
+      font-size: 18px;
+      padding: 16px;
+    }
+
+    &:hover {
+      box-shadow: none;
+      background-color: #FFC59E;
+    }
+  }
+
+  &__link {
+    font-family: 'Futura New';
+    font-weight: 700;
+    line-height: 1;
+    color: #FFC59E;
+    text-transform: uppercase;
+    margin-top: 32px;
+    display: block;
+
+    @include r($md) {
+      margin-top: 25px;
+    }
+
+    @include r($sm) {
+      margin-top: 20px;
+      line-height: 1.3;
+      padding: 2px 0;
+    }
+  }
+
+  &__code {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+
+    @include r($m) {
+      justify-content: space-between;
+    }
+  }
+
+  &__code-input {
+    width: 50px;
+    height: 57px;
+    padding: 13px 19px;
+    background: #FFFFFF;
+    border: 1px solid #EDE9E8;
+    border-radius: 20px;
+    color: #59443F;
+    line-height: 1.25;
+  }
+
+  &__timer {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: #C3B9B5;
+    margin-bottom: 32px;
+
+    @include r($md) {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__btn-back {
+    padding: 24px;
+    font-size: 20px;
+    font-family: 'Futura New';
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: #FFC59E;
+    transition: color .3s;
+
+    @include r($md) {
+      display: block;
+      font-size: 16px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 16px;
+    }
+
+    &:hover {
+      color: #59443F;
+    }
+  }
+}
+
+.review-popup {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include r($lg) {
+    max-width: 500px;
+  }
+  
+  @include v($vm) {
+    padding: 28px;
+    max-width: 80%;
+  }
+
+  &--message {
+    max-width: 400px;
+    min-height: 264px;
+  }
+  
+  &__close {
+    right: 18px;
+    top: 18px;
+
+    @include v($vm) {
+      right: 8px;
+      top: 8px;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #080606;
+    margin-bottom: 32px;
+
+    @include r($md) {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+
+    @include v($vm) {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    max-width: 400px;
+    width: 100%;
+
+    @include v($vm) {
+      max-width: 100%;
+    }
+  }
+
+  &__lable {
+    margin-bottom: 32px;
+    display: block;
+
+    @include r($lg) {
+      margin-bottom: 26px;
+    }
+
+    @include r($md) {
+      margin-bottom: 20px;
+    }
+
+    @include v($vm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 368px;
+    width: 100%;
+    resize: none;
+    padding: 16px;
+    border: 1px solid #EDE9E8;
+    border-radius: 20px;
+    font-family: 'Futura New';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #59443F;
+
+    &::placeholder {
+      font-family: 'Futura New';
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.25;
+      color: #59443F;
+      color: #C3B9B5;
+    }
+
+    @include r($xl) {
+      height: 300px;
+    }
+
+    @include r($md) {
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+
+    @include r($sm) {
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+
+    @include v($vsm) {
+      height: 280px;
+    }
+
+    @include v($vm) {
+      height: 166px;
+      padding: 12px;
+    }
+  }
+
+  &__message {
+    max-width: 320px;
+    width: 100%;
+    line-height: 1;
+    padding: 40px 0;
+  }
+  
+  &__btn {
+    margin: 0 auto;
+
+    @include v($vm) {
+      padding: 16px;
+    }
+  }
+}
+
+.form-input {
+  width: 100%;
+  height: 57px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid #ede9e8;
+
+  &::placeholder {
+    font-family: 'Futura New';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #C3B9B5;
+
+    @include r($md) {
+      font-size: 18px;
+    }
+  
+    @include r($sm) {
+      font-size: 16px;
+    }
+  }
+}
+
+.blog-article {
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
+
+  h2 {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #080606;
+    margin-bottom: 44px;
+  }
+
+  img {
+    margin-bottom: 50px;
+    height: auto;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include r($xl) {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      margin: 0 auto 50px;
+    }
+  }
+
+  @include r($md) {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    img {
+      margin: 0 auto 20px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include r($sm) {
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.aside-menu {
+  max-width: 350px;
+  width: 100%;
+
+  &__items {
+    @include r($xl) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px 30px;
+    }
+
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.4;
+    color: #080606;
+    margin-bottom: 100px;
+    
+    @include r($xl) {
+      font-size: 68px;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    @include r($lg) {
+      font-size: 56px;
+    }
+
+    @include r($md) {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    @include r($sm) {
+      font-size: 38px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include r($xl) {
+      &:not(:last-child) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: 'Futura New';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #C3B9B5;
+    text-transform: uppercase;
+    transition: color .3s, text-indent .5s;
+
+    &:hover {
+      text-indent: 10px;
+      color: #59443f;
+    }
+
+    @include r($xl) {
+      padding: 7px 0;
+      text-align: center;
+
+      &:hover {
+        text-indent: 0;
+      }
+    }
+
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+
+  &__scroll {
+    position: sticky;
+    top: 50px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    @include r($lg) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &--dots {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+    }
+  }
+  
+  &__link {
+    color: #C3B9B5;
+    transition: color .3s;
+  
+    &--active {
+      color: #080606;
+    }
+  
+    &:hover {
+      color: $color;
+    }
+
+    @include r($lg) {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.card {
+  border: 1px solid #EDE9E8;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+
+  @include r($xxl) {
+    padding: 30px 15px;
+  }
+
+  @include r($xl) {
+    padding: 30px;
+  }
+
+  @include r($lg) {
+    display: block;
+  }
+
+  @include r($sm) {
+    padding: 30px 20px;
+  }
+
+  &__left {
+    margin-right: 30px;
+    max-width: 130px;
+    width: 100%;
+    flex-shrink: 0;
+
+    @include r($xxl) {
+      margin-right: 20px;
+    }
+
+    @include r($xl) {
+      margin-right: 50px;
+    }
+
+    @include r($lg) {
+      max-width: 100%;
+      margin: 0 0 30px 0;
+    }
+
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__photo {
+    margin-bottom: 30px;
+    border-radius: 50%;
+
+    @include r($lg) {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 10px;
+    }
+
+    @include r($m) {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    color: #FFC59E;
+    font-weight: 700;
+
+    @include r($lg) {
+      padding: 7px 0;
+    }
+  }
+
+  &__right {
+    max-width: 690px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+  
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 50px;
+
+    @include r($xxl) {
+      grid-template-columns: 200px 1fr;
+      column-gap: 25px;
+    }
+
+    @include r($xl) {
+      grid-template-columns: minmax(200px, 1fr) 2fr; 
+      column-gap: 50px;
+    }
+
+    @include r($md) {
+      display: block;
+    }
+  }
+
+  &__items {
+    @include r($md) {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__category {
+    font-size: 15px;
+    line-height: 1;
+    color: #C3B9B5;
+  }
+
+  &__info {
+    line-height: 1.25;
+    color: #080606;
+    margin-top: 10px;
+    word-wrap: break-word;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.7;
+    color: #080606;
+    margin-bottom: 20px;
+
+    @include r($md) {
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+
+  &__file {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    &--med {
+      padding: 30px 15px;
+    }
+
+    @include r($m) {
+      display: block;
+    }
+  }
+
+  &__file-name {
+    line-height: 1;
+    margin-right: 20px;
+    padding-left: 30px;
+    position: relative;
+    max-width: 200px;
+    @include line-clamp;
+
+    &::before {
+      @include pseudo;
+      width: 20px;
+      height: 22px;
+      left: 0;
+      @include bg;
+      background-image: url("../images/icon/pdf.svg");
+    }
+
+    @include r($m) {
+      display: block;
+      line-height: 1.4;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__data {
+    font-size: 15px;
+    line-height: 1.3;
+    color: #C3B9B5;
+    text-align: center;
+  }
+
+  &__result {
+    max-height: 250px;
+    padding: 12px 4px;
+
+    .swiper-slide {
+      height: auto !important;
+    }
+  }
+
+  &__result-btn {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: rotate(90deg);
+
+    &--prev{
+      top: 0;
+    }
+
+    &--next {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+.news-article {
+  display: flex;
+  align-items: center;
+
+  @include r($md) {
+    display: block;
+  }
+
+  &__img {
+    border-radius: 20px;
+    margin-right: 30px;
+
+    @include r($md) {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__info {
+    max-width: 595px;
+    flex-shrink: 20;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    color: #080606;
+    transition: color .3s;
+    display: block;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: #FFC59E;
+    }
+
+    @include r($lg) {
+      padding: 3px 0;
+    }
+
+    @include r($md) {
+      margin-bottom: 10px;
+      padding: 5px 0;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    
+    @include r($md) {
+      font-size: 26px;
+    }
+  }
+
+  &__data {
+    display: block;
+    font-size: 15px;
+    line-height: 1;
+    color: #C3B9B5;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    line-height: 1.25;
+    @include line-clamps(20, 1.25, 4);
+
+    @include r($lg) {
+      @include line-clamps(20, 1.25, 5);
+    }
+
+    @include r($md) {
+      @include line-clamps(18, 1.25, 7);
+    }
+
+    @include r($sm) {
+      @include line-clamps(16, 1.25, 10);
+    }
+  }
+}
+
+.contacts {
+  padding: 235px 0 210px;
+
+  @include r($xl) {
+    padding: 100px 0;
+  }
+
+  @include r($lg) {
+    padding: 80px 0;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+    color: #080606;
+    margin-bottom: 70px;
+
+    @include r($sm) {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($lg) {
+      display: block;
+    }
+  }
+
+  &__address {
+    margin-right: 25px;
+
+    @include r($lg) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 30px 0;
+    }
+
+    @include r($sm) {
+      display: block;
+    }
+  }
+
+  &__items {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    @include r($lg) {
+      max-width: 350px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin: 0 50px 0 0;
+      }
+    }
+
+    @include r($sm) {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 25px 0;
+      }
+    }
+  }
+
+  &__name {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #080606;
+    margin-bottom: 20px;
+
+    @include r($md) {
+      font-size: 26px;
+    }
+
+    @include r($sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__item {
+    &:first-of-type {
+      margin-top: auto;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @include r($sm) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding-left: 66px;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 46px;
+      height: 46px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: opacity .3s;
+      margin: auto 0;
+    }
+
+    &--location::before {
+      background-image: url('../images/icon/location.svg');
+      background-size: 20px 29px;
+    }
+
+    &--phone::before {
+      background-image: url('../images/icon/phone.svg');
+      background-size: 20px 29px;
+    }
+
+    &--time::before {
+      background-image: url('../images/icon/time.svg');
+      background-size: 20px 29px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: .2;
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    position: relative;
+    padding-left: 66px;
+  }
+
+  &__map {
+    max-width: 100%;
+  }
+}
+
+.header {
+  padding: 32px 0;
+  background-color: rgba(255, 254, 254, 0.96);
+  box-shadow: 0 4px 10px rgba(8, 6, 6, 0.1);
+
+  @include r($sm) {
+    padding: 20px 0;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__btn {
+    font-family: 'Futura New';
+    color: #FFC59E;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    transition: color .3s;
+
+    svg {
+      transition: fill .3s;
+      fill: #FFC59E;
+    }
+
+    &:hover {
+      color: #59443F;
+
+      svg {
+        fill: #59443F;
+      }
+    }
+
+    @include r($sm) {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  &__btn-name {
+    padding-left: 19px;
+    max-width: 220px;
+    word-wrap: break-word;
+
+    @include r($sm) {
+      display: block;
+      padding: 0;
+    }
+
+    @include r($m) {
+      max-width: 110px;
+      font-size: 18px;
+    }
+  }
+
+  &__logo {
+    margin-right: 30px;
+
+    @include r($xl) {
+      padding: 0;
+    }
+
+    @include r($sm) {
+      width: 60px;
+      height: 60px;
+      margin-right: 0;
+    }
+  }
+
+  &__logo-img {
+    @include r($sm) {
+      object-fit: contain;
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include r($xl) {
+      position: absolute;
+      right: -15px;
+      top: -32px;
+      max-width: 400px;
+      width: 100%;
+      background-color: #fff;
+      z-index: 11;
+      padding: 60px 20px;
+      z-index: 10;
+      border-radius: 20px;
+      transition: transform .4s;
+      transform: translateX(100%);
+
+      &--active {
+        transform: translateX(0);
+      }
+    }
+
+    @include r($sm) {
+      top: -20px;
+      max-width: 100%;
+    }
+
+    @include v($vsm) {
+      &--active {
+        height: 80vh;
+        overflow: auto;
+      }
+      
+    }
+  
+    @include v($vm) {
+      height: 100vh;
+      overflow: auto;
+    }
+  }
+
+  &__menu {
+    margin-right: 30px;
+
+    @include r($xl) {
+      margin-right: 0;
+    }
+  }
+
+  &__menu-open {
+    display: none;
+
+    @include r($xl) {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-top: 3px solid #000;
+        border-bottom: 3px solid #000;
+        position: relative;
+  
+        &::after {
+          position: absolute;
+          content: "";
+          width: 30px;
+          height: 3px;
+          background-color: #000;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+    }
+  }
+
+  &__menu-close {
+    @include r($xl) {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 44px;
+      height: 44px;
+      z-index: 101;
+      
+      &::before, &::after {
+        @include pseudo;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #000;
+        margin: auto;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+//index page content-------------------------------------------------------------------
+
+.top-slider {
+  padding-top: 130px;
+  margin-bottom: 150px;
+  
+
+  @include r($xl) {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @include r($lg) {
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__slider {
+
+    .swiper-slide {
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    .swiper-pagination {
+      top: 0;
+      left: 34px;
+      bottom: auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+    }
+
+    .swiper-pagination-bullet {
+      margin-bottom: 70px !important;
+      color: #C3B9B5;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      opacity: 1;
+      transition: color .3s;
+      margin-bottom: 70px !important;
+
+      &:hover {
+        color: #59443F;
+      }
+
+      @include r($xxl) {
+        margin-bottom: 40px !important;
+      }
+
+      @include r($xl) {
+        margin: 0 0 10px !important;
+        padding: 12px 16px;
+      }
+
+      @include r($md) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      padding: 10px 14px;
+      color: #080606;
+      position: relative;
+
+      @include r($xl) {
+        padding: 12px 16px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border: 2px solid #080606;
+        border-right-color: transparent;
+        transform: rotate(0deg);
+        border-radius: 50%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border: 2px solid #080606;
+        border-right-color: #EDE9E8;
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin-left: 295px;
+    height: 100%;
+    position: relative;
+
+    @include r($xxl) {
+      margin-left: 150px;
+    }
+
+    @include r($md) {
+      margin-left: 0;
+    }
+  }
+
+  &__box {
+    max-width: 700px;
+    margin-bottom: 200px;
+
+    @include r($xxl) {
+      max-width: 450px;
+      margin-bottom: 100px;
+    }
+
+    @include r($xl) {
+      max-width: 350px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 60px;
+    }
+
+    @include r($sm) {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    color: #080606;
+
+    @include r($xxl) {
+      font-size: 60px;
+    }
+
+    @include r($xl) {
+      font-size: 48px;
+    }
+
+    @include r($lg) {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    @include r($sm) {
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    @include r($xxl) {
+      bottom: 0;
+      width: 700px;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include r($xl) {
+      width: 500px;
+    }
+
+    @include r($lg) {
+      width: 300px;
+    }
+
+    @include r($sm) {
+      opacity: 0.4;
+      width: 100%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    padding-right: 15px;
+    margin-top: auto;
+    margin-bottom: 80px;
+
+    @include r($xxl) {
+      margin-bottom: 50px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 0;
+      padding-right: 0;
+    }
+
+    @include r($sm) {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  &__items {
+    margin-right: 50px;
+
+    @include r($sm) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__phone {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #59443F;
+
+    @include r($lg) {
+      font-size: 20px;
+      padding: 10px 0;
+    }
+
+    @include r($sm) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 150px;
+
+  @include r($xl) {
+    margin-bottom: 100px;
+  }
+
+  @include r($lg) {
+    margin-bottom: 80px;
+  }
+
+  @include r($md) {
+    margin-bottom: 50px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1352px;
+    margin: 0 auto;
+
+    @include r($xxl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.info {
+  background-color: #FBF8F8;
+  padding: 180px 0 205px;
+  z-index: -1;
+
+  @include r($xl) {
+    padding: 100px 0;
+  }
+
+  @include r($lg) {
+    padding: 80px 0;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__container {
+    max-width: 1290px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__history {
+    text-align: center;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    
+      @include r($lg) {
+        margin-bottom: 60px;
+      }
+    
+      @include r($md) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+    color: #080606;
+    margin-bottom: 48px;
+
+    @include r($sm) {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    max-width: 480px;
+    text-align: justify;
+    margin: 0 auto 36px auto;
+
+    @include r($lg) {
+      margin-bottom: 20px;
+    }
+
+    @include r($md) {
+      font-size: 18px;
+    }
+  
+    @include r($sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__inner {
+    padding: 0 60px;
+    position: relative;
+    margin-bottom: 36px;
+
+    @include r($lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__slider {
+    max-width: 1155px;
+  }
+
+  &__slider-img {
+    border-radius: 50%;
+    margin: auto;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 315px 0;
+
+  @include r($xl) {
+    padding: 200px 0;
+  }
+
+  @include r($lg) {
+    padding: 100px 0;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__info {
+    max-width: 735px;
+    width: 100%;
+    font-size: 80px;
+    line-height: 1.4;
+    color: #080606;
+    padding-bottom: 157px;
+    position: relative;
+
+    @include r($xl) {
+      font-size: 68px;
+    }
+
+    @include r($lg) {
+      font-size: 48px;
+      text-align: center;
+      padding-bottom: 145px;
+    }
+
+    @include r($md) {
+      font-size: 40px;
+      padding-bottom: 115px;
+    }
+
+    @include r($sm) {
+      font-size: 30px;
+    }
+
+    @include r($m) {
+      font-size: 26px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url('../images/bird.png');
+      width: 288px;
+      height: 223px;
+      bottom: 0;
+      left: 390px;
+      @include bg;
+
+      @include r($xl) {
+        left: 235px;
+      }
+
+      @include r($lg) {
+        width: 220px;
+        height: 180px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      @include r($md) {
+        width: 180px;
+        height: 140px;
+      }
+    }
+  }
+
+  &__num {
+    font-family: "SchoolBook";
+    font-weight: 700;
+    font-size: 144px;
+    line-height: .8;
+    margin-bottom: 20px;
+    color: $color;
+    display: block;
+
+    @include r($xl) {
+      font-size: 122px;
+    }
+
+    @include r($lg) {
+      font-size: 102px;
+    }
+
+    @include r($md) {
+      font-size: 88px;
+    }
+
+    @include r($sm) {
+      font-size: 68px;
+    }
+
+    @include r($m) {
+      font-size: 54px;
+    }
+  }
+}
+
+.qualities {
+  padding: 60px 0 310px;
+  color: #080606;
+
+  @include r($xl) {
+    padding: 60px 0 200px;
+  }
+
+  @include r($lg) {
+    padding: 60px 0 100px;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 100px;
+
+    @include r($lg) {
+      margin-bottom: 70px;
+    }
+
+    @include r($md) {
+      font-size: 34px;
+    }
+
+    @include r($sm) {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 90px;
+    max-width: 1640px;
+    margin: 0 auto;
+
+    @include r($xxxl) {
+      gap: 50px 30px;
+    }
+
+    @include r($xxl) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 70px;
+    }
+
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 30px;
+    }
+
+    @include r($md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include r($sm) {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 485px;
+
+    @include r($xxl) {
+      max-width: 100%;
+    }
+
+    @include r($sm) {
+      text-align: center;
+    }
+  }
+
+  &__item-title {
+    display: block;
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 35px;
+
+    @include r($lg) {
+      margin-bottom: 25px;
+    }
+
+    @include r($sm) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    height: 100%;
+    padding-left: 155px;
+
+    @include r($xxxl) {
+      padding-left: 135px;
+    }
+
+    @include r($lg) {
+      padding-left: 115px;
+    }
+
+    @include r($md) {
+      min-height: 100px;
+      padding-left: 135px;
+    }
+
+    @include r($sm) {
+      min-height: auto;
+      padding: 115px 0 0;
+    }
+
+    &::after {
+      background-image: url("../images/icon/qualities/1.svg");
+      width: 80px;
+      height: 95px;
+      left: 20px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: "";
+      margin: auto 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include r($lg) {
+        left: 0;
+      }
+
+      @include r($md) {
+        left: 20px;
+      }
+
+      @include r($sm) {
+        left: 0;
+        bottom: auto;
+        margin: 0 auto;
+      }
+    }
+
+    &--work::after {
+      background-image: url("../images/icon/qualities/1.svg");
+      width: 87px;
+      height: 69px;
+    }
+
+    &--services::after {
+      background-image: url("../images/icon/qualities/2.svg");
+      width: 80px;
+      height: 95px;
+    }
+
+    &--experience::after {
+      background-image: url("../images/icon/qualities/3.svg");
+      width: 80px;
+      height: 100px;
+    }
+
+    &--laboratory::after {
+      background-image: url("../images/icon/qualities/4.svg");
+      width: 53px;
+      height: 63px;
+    }
+
+    &--hospitals::after {
+      background-image: url("../images/icon/qualities/5.svg");
+      width: 77px;
+      height: 65px;
+    }
+
+    &--equip::after {
+      background-image: url("../images/icon/qualities/6.svg");
+      width: 50px;
+      height: 73px;
+    }
+
+    &--recording::after {
+      background-image: url("../images/icon/qualities/1.svg");
+      width: 87px;
+      height: 69px;
+    }
+
+    &--pharmacy::after {
+      background-image: url("../images/icon/qualities/7.svg");
+      width: 77px;
+      height: 77px;
+    }
+
+    &--salon::after {
+      background-image: url("../images/icon/qualities/8.svg");
+      width: 72px;
+      height: 65px;
+    }
+
+  }
+}
+
+.application {
+  background-color: #FFC59E;
+
+  &__inner {
+    padding: 205px 0 115px;
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      padding: 150px 0 100px;
+    }
+
+    @include r($lg) {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 0 70px;
+    }
+
+    @include r($md) {
+      padding: 50px 0;
+    }
+  }
+
+  &__info {
+    max-width: 830px;
+    margin-right: 80px;
+    color: #FFFFFF;
+    margin-top: 45px;
+
+    @include r($xl) {
+      margin-right: 40px;
+    }
+
+    @include r($lg) {
+      max-width: 100%;
+      margin: 0 0 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__date {
+    display: block;
+    font-size: 30px;
+    line-height: .7;
+    margin-bottom: 30px;
+
+    @include r($md) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    font-family: 'SchoolBook';
+    font-size: 80px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+
+    @include r($xl) {
+      font-size: 72px;
+    }
+
+    @include r($lg) {
+      text-align: center;
+      font-size: 62px;
+    }
+
+    @include r($md) {
+      font-size: 52px;
+    }
+
+    @include r($sm) {
+      font-size: 26px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 3;
+
+    @include r($xxl) {
+      max-width: 425px;
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 493px;
+      height: 550px;
+      background-image: url("../images/dog.png");
+      left: -300px;
+      top: 150px;
+      z-index: 9;
+      @include bg;
+
+      @include r($xxl) {
+        width: 320px;
+        height: 380px;
+        left: -195px;
+        top: auto;
+        bottom: 60px;
+      }
+
+      @include r($lg) {
+        position: static;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 10;
+    
+    @include r($lg) {
+      height: auto;
+    }
+
+    &--active {
+      animation: app 3s;
+    }
+
+  }
+
+  @keyframes app {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+
+// end index page content--------------------------------------------------------------------
+
+// enroll page content----------------------------------------------------------------
+
+.enroll {
+  padding-bottom: 135px;
+
+  @include r($xl) {
+    padding-bottom: 100px;
+  }
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    color: #080606;
+
+    @include r($md) {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.4;
+    color: #080606;
+    max-width: 485px;
+    width: 100%;
+    margin-right: 65px;
+    padding-bottom: 400px;
+
+    @include r($xl) {
+      max-width: 400px;
+      font-size: 68px;
+      padding-bottom: 300px;
+      margin-right: 30px;
+    }
+
+    @include r($lg) {
+      font-size: 56px;
+      padding-bottom: 200px;
+    }
+
+    @include r($md) {
+      font-size: 48px;
+      text-align: center;
+      padding-bottom: 0;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+
+    @include r($sm) {
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    @include r($m) {
+      font-size: 32px;
+    }
+  }
+
+  &__items {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    font-family: 'Futura New';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    padding: 32px;
+    box-shadow: 2px 2px 20px rgba(#000, 0.1);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: border-color .3s;
+
+    @include r($sm) {
+      padding: 24px;
+    }
+
+    &:hover {
+      border-color: #C3B9B5;
+    }
+  }
+
+  &__text {
+    margin-right: 20px;
+  }
+
+  &__price {
+    span {
+      margin-left: 7px;
+    }
+  }
+}
+
+// end enroll page content----------------------------------------------------------------
+
+// design page content--------------------------------------------------------------------
+
+.design {
+  padding-bottom: 100px;
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__title {
+    max-width: 485px;
+    width: 100%;
+    padding-bottom: 435px;
+    margin-right: 60px;
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1.4;
+    color: #080606;
+
+    @include r($xxl) {
+      max-width: 400px;
+      font-size: 68px;
+      margin-right: 30px;
+    }
+
+    @include r($xl) {
+      display: block;
+      padding-bottom: 0;
+      margin-bottom: 50px;
+      text-align: center;
+      max-width: 100%;
+    }
+
+    @include r($lg) {
+      font-size: 56px;
+    }
+
+    @include r($md) {
+      font-size: 48px;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+
+    @include r($sm) {
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    @include r($m) {
+      font-size: 32px;
+    }
+  }
+
+  &__form {
+    max-width: 100%;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    @include r($lg) {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include r($md) {
+      display: block;
+    }
+  }
+
+  &__wrapper-item {
+    max-width: 100%;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__textarea {
+    max-width: 100%;
+    width: 100%;
+    padding: 16px;
+    min-height: 171px;
+    resize: none;
+    background: #FFFFFF;
+    border: 1px solid #EDE9E8;
+    border-radius: 20px;
+
+    &::placeholder {
+      font-family: 'Futura New';
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.25;
+      color: #C3B9B5;
+
+      @include r($md) {
+        font-size: 18px;
+      }
+    
+      @include r($sm) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 46px;
+
+    @include r($xl) {
+      margin: 46px auto 0 auto;
+    }
+
+    @include r($sm) {
+      margin: 30px auto 0 auto;
+    }
+  }
+}
+
+.pay {
+  margin-top: 24px;
+  padding: 16px 16px 40px;
+  background-color: #EDE9E8;
+  border-radius: 20px;
+
+  @include r($md) {
+    padding: 16px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include r($md) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__card {
+    margin-right: 25px;
+    max-width: 426px;
+    width: 100%;
+    flex-shrink: 1;
+
+    @include r($xxl) {
+      margin-right: 15px;
+    }
+
+    @include r($md) {
+      max-width: 80%;
+      display: inline-block;
+      margin: 0 0 15px 0;
+    }
+    @include r($sm) {
+      max-width: 100%;
+    }
+  }
+
+  &__card-input::placeholder {
+    color: #080606;
+  }
+
+  &__captcha {
+    display: flex;
+    flex-shrink: 0;
+
+    @include r($md) {
+      justify-content: center;
+    }
+
+    @include r($sm) {
+      display: block;
+    }
+  }
+
+  &__captcha-img {
+    border-radius: 20px;
+
+    @include r($sm) {
+      margin: 0 auto 15px;
+    }
+    
+  }
+
+  &__captcha-lable {
+    max-width: 209px;
+    width: 100%;
+    margin-left: 8px;
+
+    @include r($md) {
+      margin-left: 25px;
+    }
+
+    @include r($sm) {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    line-height: 1.25;
+    color: #59443F;
+    margin-bottom: 40px;
+
+    @include r($md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+//end design page content----------------------------------------------------------------
+
+// products page content--------------------------------------------------------------------
+
+.products {
+  padding-bottom: 150px;
+
+  @include r($xl) {
+    padding-bottom: 100px;
+  }
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__content {
+    max-width: 1071px;
+    width: 100%;
+    flex-shrink: 1;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__menu {
+    margin: 0 50px 0 200px;
+    flex-shrink: 0;
+
+    @include r($xxxxl) {
+      margin: 0 50px 0 0;
+    }
+
+    @include r($xl) {
+      max-width: 100%;
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &__article-container {
+    max-width: 910px;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__slider {
+    background-color: #FFFEFE;
+
+    @include r($xxxl) {
+      max-width: 750px;
+      margin: 0;
+    }
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+
+    @include r($lg) {
+      padding-bottom: 40px;
+    }
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__slider-arrows {
+    @include r($lg) {
+      display: none;
+    }
+  }
+
+  &__slide {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    padding: 20px 15px;
+    display: flex;
+    transition: background-color .5s;
+    max-width: 100%;
+    width: 100%;
+
+    &:hover {
+      background-color: #FFC59E;
+
+      .products__slider-name,
+      .products__slider-date {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__slider-img {
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+  &__slider-info {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+
+  &__slider-name {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #080606;
+
+    @include r($md) {
+      font-size: 20px;
+    }
+  }
+
+  &__slider-date {
+    margin-top: auto;
+    line-height: 1.25;
+    color: #C3B9B5;
+  }
+
+  &__slider-time {
+    display: block;
+  }
+
+  &__article-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include r($lg) {
+      margin-bottom: 30px;
+    }
+
+    @include r($sm) {
+      display: block;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__article-text {
+    margin-right: 40px;
+
+    @include r($sm) {
+      display: block;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__pagination {
+    justify-content: end;
+  }
+
+  &__services-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: rgb(237, 233, 232, 0.3);
+    mix-blend-mode: normal;
+    line-height: 1;
+    color: #080606;
+    border-radius: 15px;
+
+    @include r($sm) {
+      padding: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:nth-child(2n) {
+      background-color: rgb(255, 255, 255, 0.3);
+    }
+  }
+
+  &__services-price {
+    margin-left: 30px;
+    span {
+      margin-left: 7px;
+    }
+  }
+}
+
+.products-all {
+  padding: 50px 0 100px;
+  background-color: #EDE9E8;
+
+
+  @include r($lg) {
+    padding: 50px 0 80px;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #080606;
+    margin-bottom: 46px;
+
+    @include r($sm) {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__slider {
+    max-width: 1352px;
+    
+    .swiper-slide {
+      box-sizing: border-box;
+      padding: 4px;
+    }
+  }
+
+  &__icon {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+//end products page content----------------------------------------------------------------
+
+//cabinet page content----------------------------------------------------------------
+
+.cabinet {
+  padding: 65px 0 100px;
+
+  @include r($lg) {
+    padding: 65px 0 80px;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    margin: 95px 50px 0 0;
+
+    @include r($xxl) {
+      margin: 50px 50px 0 0;
+    }
+
+    @include r($xl) {
+      max-width: 100%;
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &__menu-title {
+    @include r($xxl) {
+      font-size: 70px;
+    }
+
+    @include r($xl) {
+      font-size: 68px;
+    }
+
+    @include r($lg) {
+      font-size: 56px;
+    }
+
+    @include r($md) {
+      font-size: 48px;
+    }
+
+    @include r($sm) {
+      font-size: 38px;
+    }
+  }
+
+  &__menu-num {
+    padding: 2px 9px;
+    background-color: #FFC59E;
+    border-radius: 50%;
+    color: #FFFFFF;
+    margin-left: 30px;
+  }
+
+  &__content {
+    max-width: 910px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #080606;
+    margin-bottom: 30px;
+
+    @include r($md) {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__new-pet {
+    display: block;
+    padding: 60px 60px 60px 190px;
+    position: relative;
+    background-color: #FFC59E;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: 'Futura New';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+
+    &::before {
+      @include pseudo;
+      @include bg;
+      width: 130px;
+      height: 130px;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      background-image: url("../images/icon/newpets.svg");
+      margin: auto 0;
+    }
+
+    @include r($xl) {
+      max-width: 900px;
+    }
+
+    @include r($md) {
+      padding: 45px 30px 45px 125px;
+      font-size: 24px;
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        left: 15px;
+      }
+    }
+
+    @include r($sm) {
+      padding: 20px 10px 20px 70px;
+      font-size: 18px;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.my-data {
+  margin-bottom: 100px;
+
+  @include r($xl) {
+    margin-bottom: 50px;
+  }
+}
+
+.my-pets {
+  margin-bottom: 100px;
+
+  @include r($xl) {
+    margin-bottom: 50px;
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//end cabinet page content----------------------------------------------------------------
+
+//history page content----------------------------------------------------------------
+
+.history {
+  padding-bottom: 110px;
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__content {
+    max-width: 910px;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+
+    @include r($xl) {
+      margin: 0 0 50px 0;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 50px;
+    height: auto;
+
+    @include r($xl) {
+      margin: 0 auto 50px;
+    }
+
+    @include r($md) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &__article-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+
+    img {
+      margin-bottom: 0;
+    }
+
+    @include r($xxl) {
+      gap: 20px;
+    }
+
+    @include r($md) {
+      margin-bottom: 24px;
+    }
+
+    @include r($sm) {
+      gap: 10px;
+    }
+
+    @include r($m) {
+      display: block;
+
+      img {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+//end history page content----------------------------------------------------------------
+
+//history page content----------------------------------------------------------------
+
+.collective {
+  padding-bottom: 100px;
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__content {
+    max-width: 910px;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+
+    @include r($xl) {
+      margin: 0 0 50px 0;
+      max-width: 100%;
+    }
+  }
+
+  &__menu-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__img {
+    margin-bottom: 50px;
+    height: auto;
+
+    @include r($xl) {
+      margin: 0 auto 50px;
+    }
+
+    @include r($md) {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &__about {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #000000;
+    margin-bottom: 44px;
+
+    @include r($xl) {
+      text-align: center;
+    }
+  
+    @include r($md) {
+      font-size: 26px;
+    }
+  
+    @include r($sm) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__specialist-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    @include r($xxl) {
+      gap: 25px 15px;
+    }
+
+    @include r($sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__link {
+    &:hover {
+      .collective__card {
+        background-color: #FFC59E;
+      }
+
+      .collective__experience, .collective__category {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__card {
+    height: 100%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color .3s;
+  }
+
+  &__card-left {
+    margin-right: 20px;
+  }
+
+  &__experience {
+    font-size: 15px;
+    line-height: 1.3;
+    transition: color .3s;
+  }
+
+  &__category {
+    transition: color .3s;
+  }
+
+  &__card-photo {
+    margin-bottom: 20px;
+  }
+}
+
+//end history page content----------------------------------------------------------------
+
+//doctor page content----------------------------------------------------------------
+
+.doctor {
+  padding-bottom: 100px;
+
+  @include r($lg) {
+    padding-bottom: 80px;
+  }
+
+  @include r($md) {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+    text-align: center;
+
+    @include r($xxl) {
+      flex-shrink: 0;
+    }
+
+    @include r($xl) {
+      margin: 0 0 50px 0;
+      max-width: 100%;
+    }
+
+    @include r($md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__menu-img {
+    margin-bottom: 30px;
+    border-radius: 50%;
+
+    @include r($xl) {
+      margin: 0 auto 30px;
+    }
+
+    @include r($md) {
+      margin: 0 auto 24px;
+    }
+  }
+
+  &__menu-date {
+    display: block;
+    line-height: 1.25;
+    color: #C3B9B5;
+    margin-bottom: 30px;
+
+    time {
+      margin-left: 7px;
+    }
+
+    @include r($md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__menu-link {
+    margin: 0 auto 28px;
+
+    @include r($md) {
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__menu-btn {
+    font-family: 'Futura New';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    color: #FFC59E;
+    padding: 12px 0;
+    transition: color .3s;
+
+    &:hover {
+     color: #59443f;
+    }
+
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    max-width: 910px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: #000000;
+    margin-bottom: 5px;
+
+    @include r($md) {
+      font-size: 26px;
+    }
+  }
+}
+
+.doctor-info {
+  margin-bottom: 100px;
+
+  @include r($lg) {
+    margin-bottom: 80px;
+  }
+
+  @include r($md) {
+    margin-bottom: 50px;
+  }
+
+  &__desc {
+    margin-bottom: 30px;
+    color: #C3B9B5;
+    display: block;
+
+    @include r($sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include r($md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__courses {
+    font-weight: 400;
+    font-family: 'Futura New';
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  &__slider {
+    @include r($xxl) {
+      max-width: 780px;
+    }
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__slider-item {
+    width: auto !important;
+    padding: 16px;
+    border: 1px solid #EDE9E8;
+    border-radius: 20px;
+  }
+  
+  &__slider-date {
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    color: #C3B9B5;
+    margin-bottom: 4px;
+  }
+
+  &__slider-name {
+    line-height: 1.25;
+    color: #080606;
+  }
+}
+
+.reviews {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include r($sm) {
+      display: block;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__desc {
+    margin-right: 30px;
+    color: #C3B9B5;
+
+    @include r($sm) {
+      display: block;
+      margin: 0 0 16px 0;
+    }
+  }
+
+  &__pagination {
+    @include r($sm) {
+      justify-content: end;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    border: 1px solid #EDE9E8;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+
+    @include r($md) {
+      padding: 18px;
+    }
+
+    @include r($sm) {
+      display: block;
+    }
+  }
+
+  &__photo {
+    margin-right: 30px;
+
+    @include r($sm) {
+      margin: 0 auto 26px;
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  &__photo-ava {
+    margin-right: 30px;
+
+    @include r($m) {
+      margin-right: 20px;
+    }
+  }
+
+  &__emoji {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    @include r($md) {
+      top: 18px;
+      right: 18px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 690px;
+    flex-shrink: 10;
+  }
+
+  &__comment {
+    margin-bottom: 30px;
+  }
+
+  &__category {
+    display: block;
+    font-size: 15px;
+    line-height: 1;
+    color: #C3B9B5;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    display: block;
+    line-height: 1.25;
+    color: #080606;
+    margin-bottom: 20px;
+  }
+
+  &__answer {
+    display: flex;
+  }
+
+  &__answer-inner {
+    max-width: 585px;
+    flex-shrink: 10;
+  }
+}
+
+//end doctor page content----------------------------------------------------------------
+
+//contacts-page content----------------------------------------------------------------
+
+.contacts-page {
+  padding: 100px 0 180px;
+
+  @include r($xl) {
+    padding: 100px 0;
+  }
+
+  @include r($lg) {
+    padding: 80px 0;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+}
+
+//end contacts-page content----------------------------------------------------------------
+
+//blog page content----------------------------------------------------------------
+
+.blog {
+  padding: 100px 0;
+
+  @include r($lg) {
+    padding: 80px 0;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+
+    @include r($xl) {
+      max-width: 100%;
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &__menu-items {
+    @include r($xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__content {
+    max-width: 910px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__items {
+    margin-bottom: 58px;
+
+    @include r($md) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    @include r($md) {
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+//end blog page content----------------------------------------------------------------
+
+//news page content----------------------------------------------------------------
+
+.news {
+  padding: 100px 0;
+
+  @include r($lg) {
+    padding: 80px 0;
+  }
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+
+    @include r($xl) {
+      margin: 0 0 50px 0;
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 910px;
+    width: 100%;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+  }
+
+  &__items {
+    margin-bottom: 58px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__no-active {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 2;
+    }
+
+    .news__message {
+      display: block;
+      margin-bottom: 10px;
+      opacity: 1;
+      z-index: 3;
+      position: relative;
+    }
+
+    .news-article__data {
+      display: none;
+    }
+
+    .news-article__title {
+      opacity: 0.5;
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__message {
+    display: none;
+  }
+
+  &__pagination {
+    float: right;
+  }
+}
+
+//end news page content----------------------------------------------------------------
+
+
+.footer {
+  background-color: #59443F;
+  color: #FFFFFF;
+  padding: 80px 0 60px;
+
+  @include r($sm) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($xxl) {
+      display: block;
+    }
+  }
+
+  &__left {
+    @include r($xxl) {
+      margin-bottom: 50px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__right {
+    @include r($xxl) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 30px;
+    }
+
+    @include r($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($md) {
+      grid-template-columns: 1fr;
+    }
+
+    @include r($sm) {
+      gap: 15px;
+    }
+  }
+
+  &__logo {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &:hover {
+      .footer__logo-img {
+        background-color: #FFC59E;
+      }
+
+      .footer__title {
+        color: #FFC59E;
+      }
+
+      .footer__subtitle {
+        color: #FFC59E;
+      }
+    }
+
+    @include r($sm) {
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+  }
+
+  &__logo-img {
+    width: 90px;
+    height: 90px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 22px;
+    transition: background-color .3s;
+
+    @include r($sm) {
+      width: 65px;
+      height: 65px;
+      margin-right: 15px;
+    }
+  }
+
+  &__title {
+    font-family: 'SchoolBook';
+    font-size: 50px;
+    line-height: 0.9;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    transition: color .3s;
+
+    @include r($sm) {
+      font-size: 34px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 1;
+    transition: color .3s;
+
+    @include r($sm) {
+      font-size: 18px;
+    }
+  }
+
+  &__nav {
+    padding-left: 110px;
+    display: flex;
+
+    @include r($xxl) {
+      justify-content: space-between;
+    }
+
+    @include r($xl) {
+      padding-left: 0;
+    }
+
+    @include r($lg) {
+      display: block;
+    }
+
+    @include r($sm) {
+      text-align: center;
+    }
+  }
+
+  &__info {
+    max-width: 192px;
+    width: 100%;
+    margin-right: 100px;
+    display: block;
+
+    @include r($xl) {
+      max-width: 100%;
+      margin-right: 70px;
+    }
+
+    @include r($lg) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__menu {
+    margin-right: 50px;
+    column-count: 2;
+    column-gap: 100px;
+
+    @include r($xxl) {
+      margin-right: 0;
+      column-count: 3;
+      column-gap: 50px;
+    }
+
+    @include r($md) {
+      column-count: 2;
+    }
+
+    @include r($m) {
+      column-gap: 15px;
+      column-count: 1;
+    }
+  }
+
+  &__menu-item {
+    line-height: 1.5;
+    width: 192px;
+    margin-bottom: 5px;
+    transition: color .3s;
+
+    @include r($lg) {
+      width: 100%;
+    }
+
+    &:hover {
+      color: #FFC59E;
+    }
+  }
+
+  &__menu-link {
+    display: block;
+
+    @include r($lg) {
+      padding: 7px 0;
+    }
+  }
+
+  &__shops {
+    margin-bottom: 50px;
+
+    @include r($xxl) {
+      margin: 0 auto;
+    }
+  }
+
+  &__social {
+    margin-bottom: 30px;
+
+    @include r($xxl) {
+      margin: 0 auto;
+    }
+
+    svg {
+      fill: #FFFFFF;
+
+      &:hover {
+        fill: #FFC59E;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__emails {
+    margin-bottom: 70px;
+
+    @include r($xxl) {
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  &__email {
+    display: block;
+    line-height: 1.5;
+    transition: color .3s;
+
+    @include r($lg) {
+      padding: 7px 0;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:hover {
+      color: #FFC59E;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+
+    @include r($xxl) {
+      grid-column: 1/-1;
+      margin: 0 auto;
+    }
+
+    img {
+      margin: 0 4px;
+    }
+  }
+}

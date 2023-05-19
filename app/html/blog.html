@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Блог с новостями</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="blog">
+        <div class="container">
+          <div class="blog__inner">
+            <aside class="aside-menu blog__menu">
+              <h1 class="aside-menu__title">Блог</h1>
+            </aside>
+            <div class="blog__content">
+              <ul class="blog__items">
+                <li class="blog__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/blog/1.jpg" alt="статья 1" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Наружный отит и грибы Malassezia</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2018-05-29 19:00">29 мая 2018</time>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/blog/1.jpg" alt="статья 2" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Наружный отит и грибы Malassezia</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2018-05-29 19:00">29 мая 2018</time>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/blog/1.jpg" alt="статья 3" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Наружный отит и грибы Malassezia</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2018-05-29 19:00">29 мая 2018</time>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/blog/1.jpg" alt="статья 4" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Наружный отит и грибы Malassezia</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2018-05-29 19:00">29 мая 2018</time>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="blog__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/blog/1.jpg" alt="статья 5" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Наружный отит и грибы Malassezia</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2018-05-29 19:00">29 мая 2018</time>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <ul class="pagination">
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--active" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

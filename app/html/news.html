@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Cтраница для записи на приём</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./components/header.html')
+    <main class="main">
+      <div class="news">
+        <div class="container">
+          <div class="news__inner">
+            <aside class="aside-menu news__menu">
+              <h1 class="aside-menu__title">Новости и акции</h1>
+            </aside>
+            <div class="news__content">
+              <ul class="news__items">
+                <li class="news__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/news/1.jpg" alt="статья 1" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Подарок</h2>
+                      </a>
+                      <time class="news-article__data news__article-data" datetime="2020-12-01 00:00">до 1 декабря 2020</time>
+                      <span class="news__message">Акция закончилась</span>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="news__item">
+                  <article class="news-article">
+                    <img class="news-article__img" src="../images/news/1.jpg" alt="статья 2" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Подарок</h2>
+                      </a>
+                      <time class="news-article__data news__article-data" datetime="2020-12-01 00:00">до 1 декабря 2020</time>
+                      <span class="news__message">Акция закончилась</span>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="news__item">
+                  <article class="news-article news__no-active">
+                    <img class="news-article__img" src="../images/news/1.jpg" alt="статья 3" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Подарок</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2020-12-01 00:00">до 1 декабря 2020</time>
+                      <span class="news__message">Акция закончилась</span>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="news__item">
+                  <article class="news-article news__no-active">
+                    <img class="news-article__img" src="../images/news/1.jpg" alt="статья 4" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Подарок</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2020-12-01 00:00">до 1 декабря 2020</time>
+                      <span class="news__message">Акция закончилась</span>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="news__item">
+                  <article class="news-article news__no-active">
+                    <img class="news-article__img" src="../images/news/1.jpg" alt="статья 5" width="255" height="255">
+                    <div class="news-article__info">
+                      <a class="news-article__link" href="#">
+                        <h2 class="news-article__title">Подарок</h2>
+                      </a>
+                      <time class="news-article__data" datetime="2020-12-01 00:00">до 1 декабря 2020</time>
+                      <span class="news__message">Акция закончилась</span>
+                      <p class="news-article__text">
+                        Данные клинического осмотра, указывающие на наличие наружного отита, включают такие признаки, как отек и эритема ушной раковины, выделения из ушей, болезненная реакция и/или беспокойство при пальпации наружного слухового хода и потряхивание головой после такого представления.
+                      </p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <ul class="pagination">
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--active" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('./components/footer.html')
+    @include('./components/popup/city.html')
+    @include('./components/popup/auth.html')
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
