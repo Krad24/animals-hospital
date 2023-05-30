@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Блог с новостями</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="big-container">
+    <nav class="header__nav">
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__img header__logo-img" src="images/icon/logo.svg" alt="логотип" width="79" height="63">
+      </a>
+      <div class="header__inner">
+        <ul class="menu header__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="cabinet.html" id="authBtn">ЛИЧНЫЙ КАБИНЕТ</a>
+          </li>
+          <li class="menu__item menu__dropdown">
+            <button class="menu__link menu__dropdown-btn" type="button">О НАС</button>
+            <ul class="menu__dropdown-items">
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="products-page.html">Услуги и цены</a>
+              </li>
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="collective.html">Коллектив</a>
+              </li>
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="history.html">История компании</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="news.html">НОВОСТИ И АКЦИИ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="contacts-page.html">КОНТАКТЫ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="blog.html">БЛОГ</a>
+          </li>
+        </ul>
+        <button class="header__menu-close" type="button"></button>
+      </div>
+      <button class="header__btn" id="cityBtn">
+        <svg width="20" height="29">
+          <use xlink:href="images/sprite.svg#location"></use>
+        </svg> 
+        <span class="header__btn-name">ВОЛГОГРАД</span>
+      </button>
+      <button class="header__menu-open" type="button">
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+    <main class="main">
+      <div class="cabinet">
+        <h1 class="sr-only">Информация о пользователе</h1>
+        <div class="container">
+          <div class="cabinet__inner">
+            <aside class="aside-menu cabinet__menu">
+              <div class="aside-menu__scroll">
+                <h2 class="aside-menu__title cabinet__menu-title">Виктория</h2>
+                <ul class="aside-menu__items">
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#my-data">ЛИЧНЫЕ ДАННЫЕ</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#my-pets">МОИ ПИТОМЦЫ</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#my-receiving">
+                      ЗАПИСЬ НА ПРИЕМ 
+                      <span class="cabinet__menu-num">1</span>
+                    </a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#">ВЫЙТИ</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <div class="cabinet__content">
+              <section class="my-data" id="my-data">
+                <h2 class="cabinet__title">Личные данные</h2>
+                <article class="card">
+                  <h3 class="sr-only">Информация о пользоватаеле</h3>
+                  <div class="card__left">
+                    <picture><source srcset="images/avatars/not-ava.avif" type="image/avif"><source srcset="images/avatars/not-ava.webp" type="image/webp"><img class="card__photo" src="images/avatars/not-ava.jpg" alt="avatar" width="130" height="130"></picture>
+                    <a class="card__link" href="#">изменить</a>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">имя</dt>
+                        <dd class="card__info">Виктория</dd>
+                        <dt class="card__category">фамилия</dt>
+                        <dd class="card__info">Иванова</dd>
+                        <dt class="card__category">отчетсво</dt>
+                        <dd class="card__info">Александровна</dd>
+                        <dt class="card__category">телефон</dt>
+                        <dd class="card__info"><a href="tel:89995981245">+8 999 598-12-45</a></dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">О себе</dt>
+                        <dd class="card__info">
+                          Живу в Волгограде, очень люблю животных! Мечтаю завести много зверей и построить приют. Пока что у меня собака, кошка и рыбки :)
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+              </section>
+              <section class="my-pets" id="my-pets">
+                <h2 class="cabinet__title">Мои питомцы</h2>
+                <a class="cabinet__new-pet" href="#">ДОБАВИТЬ НОВОГО ПИТОМЦА</a>
+                <article class="card my-pets__card">
+                  <div class="card__left">
+                    <picture><source srcset="images/avatars/pet1.avif" type="image/avif"><source srcset="images/avatars/pet1.webp" type="image/webp"><img class="card__photo" src="images/avatars/pet1.jpg" alt="avatar" width="130" height="130"></picture>
+                    <a class="card__link" href="#">изменить</a>
+                  </div>
+                  <div class="card__right">
+                    <h3 class="card__title">Громопетр</h3>
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">тип</dt>
+                        <dd class="card__info">Собака</dd>
+                        <dt class="card__category">пол</dt>
+                        <dd class="card__info">Мужской</dd>
+                        <dt class="card__category">порода</dt>
+                        <dd class="card__info">Без породы</dd>
+                        <dt class="card__category">возраст</dt>
+                        <dd class="card__info">1 год 2 месяца</dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">медицинская карта</dt>
+                        <dd class="card__info">
+                          <a class="card__file card__file--med" href="#">
+                            <span class="card__file-name">10255</span>
+                            <span class="card__data">
+                              обновлена
+                              <time datetime="2023-06-25">25.06.2023</time>
+                            </span>
+                          </a>
+                        </dd>
+                        <dt class="card__category">результаты анализов</dt>
+                        <dd class="card__info">
+                        <div class="swiper card__result">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">10255</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">ОАК</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Узи брюшной полости</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Биохимия крови</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="swiper-slide">
+                              <a class="card__file" href="#">
+                                <span class="card__file-name">Анализ очень длинное</span>
+                                <span class="card__data">
+                                  <time datetime="2023-06-25">25.06.2023</time>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        <div class="card__result-btn card__result-btn--prev slider-btn slider-btn--prev swiper-button-prev"></div>
+                        <div class="card__result-btn card__result-btn--next slider-btn slider-btn--next swiper-button-next"></div>
+                        </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+                <article class="card my-pets__card">
+                  <div class="card__left">
+                    <picture><source srcset="images/avatars/pet2.avif" type="image/avif"><source srcset="images/avatars/pet2.webp" type="image/webp"><img class="card__photo" src="images/avatars/pet2.jpg" alt="avatar" width="130" height="130"></picture>
+                    <a class="card__link" href="#">изменить</a>
+                  </div>
+                  <div class="card__right">
+                    <h3 class="card__title">Имя питомца</h3>
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">тип</dt>
+                        <dd class="card__info">Кошка</dd>
+                        <dt class="card__category">пол</dt>
+                        <dd class="card__info">Женский</dd>
+                        <dt class="card__category">порода</dt>
+                        <dd class="card__info">Русская голубая</dd>
+                        <dt class="card__category">возраст</dt>
+                        <dd class="card__info">4 месяца</dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">медицинская карта</dt>
+                        <dd class="card__info">
+                          Медицинскую карту заводят при первом посещении клиники и обновляют при каждом обращении. Здесь вы сможете посмотреть и скачать актуальную карту в формате pdf
+                        </dd>
+                        <dt class="card__category">результаты анализов</dt>
+                        <dd class="card__info">Пока нет готовых анализов</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+              </section>
+              <section class="my-receiving" id="my-receiving">
+                <h2 class="cabinet__title">Запись на прием</h2>
+                <article class="card">
+                  <h3 class="sr-only">Информация о враче</h3>
+                  <div class="card__left">
+                    <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="card__photo" src="images/avatars/ava1.jpg" alt="avatar" width="130" height="130"></picture>
+                    <a class="card__link" href="#">отменить прием</a>
+                  </div>
+                  <div class="card__right">
+                    <div class="card__wrapper">
+                      <dl class="card__items">
+                        <dt class="card__category">врач</dt>
+                        <dd class="card__info">Иванова Ирина Владимировна</dd>
+                        <dt class="card__category">ветклиника</dt>
+                        <dd class="card__info">Айболит на Краснополянской</dd>
+                      </dl>
+                      <dl class="card__items">
+                        <dt class="card__category">питомец</dt>
+                        <dd class="card__info">Громопетр</dd>
+                        <dt class="card__category">дата</dt>
+                        <dd class="card__info"><time datetime="2019-10-15">15.10.19</time></dd>
+                        <dt class="card__category">время</dt>
+                        <dd class="card__info"><time>15:45</time></dd>
+                      </dl>
+                    </div>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <a class="logo footer__logo" href="index.html">
+          <div class="footer__logo-img">
+            <img class="logo__img" src="images/icon/logo.svg" alt="логотип" width="60" height="48">
+          </div>
+          <div class="footer__logo-inner">
+            <h2 class="footer__title">Айболит</h2>
+            <p class="footer__subtitle">ветеринарная клиника</p>
+          </div>
+        </a>
+        <nav class="footer__nav">
+          <span class="footer__info">Политика конфиденциальности в отношении обработки персональных данных</span>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="index.html">Главная</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="products-page.html">Услуги и цены</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="history.html">История компании</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="collective.html">Наши специалисты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Реквизиты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="design.html">Онлайн-оплата</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="doctor-page.html">Отзывы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="contacts-page.html">Контакты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Груминг-салон</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Косметика</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="news.html">Новости и акции</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="blog.html">Блог</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__right">
+        <div class="footer__shops shops">
+          <a class="shops__item" href="https://www.apple.com/app-store/">
+            <img class="shops__img" src="images/icon/app-store.svg" alt="app store" width="138" height="40">
+          </a>
+          <a class="shops__item" href="https://pay.google.com/">
+            <picture><source srcset="images/icon/google-play.avif" type="image/avif"><source srcset="images/icon/google-play.webp" type="image/webp"><img class="shops__img" src="images/icon/google-play.png" alt="google play" width="158" height="61"></picture>
+          </a>
+        </div>
+        <ul class="social footer__social">
+          <li class="social__item">
+            <a class="social__link" href="https://www.instagram.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#inst"></use>
+              </svg>
+              <span class="sr-only">ссылка на instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.facebook.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#fb"></use>
+              </svg>
+              <span class="sr-only">ссылка на facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+              <span class="sr-only">ссылка на vk</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
+              <span class="sr-only">ссылка на youtube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__emails">
+          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit@gmail.com</a>
+          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit34@gmail.com</a>
+        </div>
+        <div class="footer__text">
+          <span>Made with</span>
+          <picture><source srcset="images/icon/heart.avif" type="image/avif"><source srcset="images/icon/heart.webp" type="image/webp"><img src="images/icon/heart.png" alt="эмодзи сердецко"></picture>
+          <span>from UnitBean</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="popup" id="popup-city" >
+  <div class="popup__content">
+    <button class="popup__close" type="button">
+      <svg class="popup__close-img" width="20" height="20" >
+        <use xlink:href="images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+    <span class="popup__title">Ваш город</span>
+    <ul class="popup__items">
+      <li class="popup__item">
+        <button class="popup__btn">Волгоград</button>
+      </li>
+      <li class="popup__item">
+        <button class="popup__btn">Грозный</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

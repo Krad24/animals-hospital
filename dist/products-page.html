@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Блог с новостями</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="big-container">
+    <nav class="header__nav">
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__img header__logo-img" src="images/icon/logo.svg" alt="логотип" width="79" height="63">
+      </a>
+      <div class="header__inner">
+        <ul class="menu header__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="cabinet.html" id="authBtn">ЛИЧНЫЙ КАБИНЕТ</a>
+          </li>
+          <li class="menu__item menu__dropdown">
+            <button class="menu__link menu__dropdown-btn" type="button">О НАС</button>
+            <ul class="menu__dropdown-items">
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="products-page.html">Услуги и цены</a>
+              </li>
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="collective.html">Коллектив</a>
+              </li>
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="history.html">История компании</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="news.html">НОВОСТИ И АКЦИИ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="contacts-page.html">КОНТАКТЫ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="blog.html">БЛОГ</a>
+          </li>
+        </ul>
+        <button class="header__menu-close" type="button"></button>
+      </div>
+      <button class="header__btn" id="cityBtn">
+        <svg width="20" height="29">
+          <use xlink:href="images/sprite.svg#location"></use>
+        </svg> 
+        <span class="header__btn-name">ВОЛГОГРАД</span>
+      </button>
+      <button class="header__menu-open" type="button">
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+    <main class="main">
+      <div class="breadcrumbs">
+          <div class="container">
+            <a class="link breadcrumbs__link" href="#">назад</a>
+          </div>
+      </div>
+      <div class="products">
+        <div class="big-container">
+          <div class="products__inner">
+            <aside class="aside-menu products__menu">
+              <div class="aside-menu__scroll">
+                <h1 class="aside-menu__title">Терапия</h1>
+                <ul class="aside-menu__items">
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#enroll">ЗАПИСАТЬСЯ НА ПРИЕМ</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#therapy">ТЕРАПИЯ В НАШЕЙ КЛИНИКЕ</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#subtitle1">ПОЗДАГОЛОВОК 1</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#subtitle2">ПОДЗАГОЛОВОК 2</a>
+                  </li>
+                  <li class="aside-menu__item">
+                    <a class="aside-menu__link" href="#price">ЦЕНЫ</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <div class="products__content">
+              <article class="blog-article" id="enroll">
+                <div class="products__article-container">
+                  <h2>Записаться на прием к терапевту</h2>
+                </div>
+                <div class="swiper products__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="products__slide" href="enroll.html">
+                        <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="products__slider-img" src="images/avatars/ava1.jpg" alt="фото врача" width="50" height="50"></picture>
+                        <div class="products__slider-info">
+                          <span class="products__slider-name">
+                            Ивантелеев<br> Иван Константинович
+                          </span>
+                          <p class="products__slider-date">ближайшая дата приема:
+                            <time class="products__slider-time" datetime="2023-08-29">29.08.23</time>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="products__slide" href="enroll.html">
+                        <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="products__slider-img" src="images/avatars/ava1.jpg" alt="фото врача" width="50" height="50"></picture>
+                        <div class="products__slider-info">
+                          <span class="products__slider-name">
+                            Ивантелеев<br> Иван Константинович
+                          </span>
+                          <p class="products__slider-date">ближайшая дата приема:
+                            <time class="products__slider-time" datetime="2023-08-29">29.08.19</time>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="products__slide" href="enroll.html">
+                        <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="products__slider-img" src="images/avatars/ava1.jpg" alt="фото врача" width="50" height="50"></picture>
+                        <div class="products__slider-info">
+                          <span class="products__slider-name">
+                            Ивантелеев<br> Иван Константинович
+                          </span>
+                          <p class="products__slider-date">ближайшая дата приема:
+                            <time class="products__slider-time" datetime="2023-08-29">29.08.19</time>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="products__slide" href="enroll.html">
+                        <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="products__slider-img" src="images/avatars/ava1.jpg" alt="фото врача" width="50" height="50"></picture>
+                        <div class="products__slider-info">
+                          <span class="products__slider-name">
+                            Ивантелеев<br> Иван Константинович
+                          </span>
+                          <p class="products__slider-date">ближайшая дата приема:
+                            <time class="products__slider-time" datetime="2023-08-29">29.08.19</time>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="products__slide" href="enroll.html">
+                        <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="products__slider-img" src="images/avatars/ava1.jpg" alt="фото врача" width="50" height="50"></picture>
+                        <div class="products__slider-info">
+                          <span class="products__slider-name">
+                            Ивантелеев<br> Иван Константинович
+                          </span>
+                          <p class="products__slider-date">ближайшая дата приема:
+                            <time class="products__slider-time" datetime="2023-08-29">29.08.19</time>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="products__slide" href="enroll.html">
+                        <picture><source srcset="images/avatars/ava1.avif" type="image/avif"><source srcset="images/avatars/ava1.webp" type="image/webp"><img class="products__slider-img" src="images/avatars/ava1.jpg" alt="фото врача" width="50" height="50"></picture>
+                        <div class="products__slider-info">
+                          <span class="slider-btn-name">
+                            Ивантелеев<br> Иван Константинович
+                          </span>
+                          <p class="products__slider-date">ближайшая дата приема:
+                            <time class="products__slider-time" datetime="2023-08-29">29.08.19</time>
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="products__slider-arrows slider-btn slider-btn--prev swiper-button-prev"></div>
+                  <div class="products__slider-arrows slider-btn slider-btn--next swiper-button-next"></div>
+                  <div class="swiper-pagination slider-pagination"></div>
+                </div>  
+              </article>
+              <article class="blog-article" id="therapy">
+                <div class="products__article-container">
+                  <h2>Терапия в нашей клинике</h2>
+                  <p>
+                    Терапия - область гуманной и ветеринарной медицины, занимающаяся непосредственно лечением патологий, облегчением состояния больного и устранением симптомов заболеваний.
+                  </p>
+                  <p>
+                    Терапевтическое отделение клиники Айболит занимается диагностикой и лечением следующих болезней:
+                  </p>
+                  <ul>
+                    <li>- органов пищеварения;</li>
+                    <li>- органов сердечно-сосудистой системы;</li>
+                    <li>- органов дыхательной системы;</li>
+                    <li>- нервной системы;</li>
+                    <li>- органов мочевыделительной системы;</li>
+                    <li>- эндокринной системы;</li>
+                    <li>- нарушения обмена веществ;</li>
+                    <li>- кожи и ее производных;</li>
+                    <li>- органов чувств;</li>
+                    <li>- репродуктивной области;</li>
+                    <li>- инфекционной и инвазионной природы;</li>
+                    <li>- токсикологической природы.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="blog-article" id="subtitle1">
+                <div class="products__article-container">
+                  <h2>Подзаголовок 1</h2>
+                  <p>
+                    В нашей клинике имеются как врачи-терапевты общей практики, так и узкие специалисты по ряду перечисленных областей, что дает возможность излечивать тяжелые и редкие случаи патологий.
+                  </p>
+                  <picture><source srcset="images/products-article/1.avif" type="image/avif"><source srcset="images/products-article/1.webp" type="image/webp"><img src="images/products-article/1.jpg" alt="лечение собаки"></picture>
+                  <p>
+                    Врач-терапевт подходит к лечению животного комплексно, предварительно изучив его анамнез, учитывая возраст, пол, породу, наличие хронических болезней, условия содержания, типа кормления, оценив общее состояние питомца, полностью осмотрев его и назначив необходимую диагностику и соответствующее лечение.
+                  </p>
+                  <p>
+                    Врачи клиники имеют широкий спектр диагностических возможностей, что является идеальным условием для постановки точного диагноза, а значит и назначения того лечения, которое наиболее эффективно справится с данным конкретным клиническим случаем.
+                  </p>
+                  <p>Некоторую диагностику можно провести тут же на месте в течение буквально нескольких минут, что немаловажно для экстренных случаев и значительно экономят время владельцам:</p>
+                  <ul>
+                    <li>- гематологический и биохимический анализы крови;</li>
+                    <li>- исследование Т4 и кортизол;</li>
+                    <li>- анализ газов крови;</li>
+                    <li>- рентген;</li>
+                    <li>- ультразвуковое исследование брюшной полости и сердца;</li>
+                    <li>- микроскопия мазков и соскобов;</li>
+                    <li>- люминесцентный тест на лишай;</li>
+                    <li>- экспресс-анализы на основные вирусные заболевания.</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="blog-article" id="subtitle2">
+                <div class="products__article-container">
+                  <h2>Подзаголовок 2</h2>
+                  <p>
+                    Большинство исследований, требующих седации (эндоскопия, МРТ, лапароскопия), так же доступны в течение суток. Более сложные анализы, такие как бактериологический посев, гормоны, гистологическое исследование мы направляем в дистанционную лабораторию.
+                  </p>
+                  <p>
+                    Получив результаты исследований врач приступает к анализу причин и механизмов развития болезни и назначает лечение. Оно может быть медикаментозным (домашним или стационарным) или оперативным (экстренным или плановым).
+                  </p>
+                  <p>
+                    Эффективность терапии в большой степени зависит и от владельца животного, ведь именно ему необходимо будет соблюдать предписания врача, вовремя давать препараты или ставить уколы, следить за развитием динамики и симптомов, чтобы вовремя оповестить врача о происходящих изменениях, для своевременной коррекции лечения.
+                  </p>
+                  <p>
+                    Кроме лечения терапевты занимаются и профилактикой заболеваний. Доктора с удовольствием расскажут вам основы выращивания, содержания и кормления питомца, графики дегельминтизаций и прививок. Оформят ветеринарный паспорт и чипируют ваше животное.
+                  </p>
+                </div>
+              </article>
+              <article class="blog-article" id="price">
+                <div class="products__article-container">
+                  <h2>Цены</h2>
+                  <div class="products__article-inner">
+                    <span class="products__article-text">Цены указаны без учета расходоных материалов</span>
+                    <ul class="pagination">
+                      <li class="pagination__item">
+                        <a class="pagination__link pagination__link--active" href="#">1</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">2</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">3</a>
+                      </li>
+                      <li class="pagination__item">
+                        <a class="pagination__link" href="#">4</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="products__services">
+                    <li class="products__services-item">
+                      <span class="products__services-name">Прием</span>
+                      <span class="products__services-price">320<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Прием повторный</span>
+                      <span class="products__services-price">220<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Консультация без осмотра животного</span>
+                      <span class="products__services-price">350<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Вызов врача на дом</span>
+                      <span class="products__services-price">1000<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Полная выписка из истории болезни</span>
+                      <span class="products__services-price">500<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Консультация по медицинским документам</span>
+                      <span class="products__services-price">500<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Прием</span>
+                      <span class="products__services-price">320<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Прием повторный</span>
+                      <span class="products__services-price">220<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Консультация без осмотра животного</span>
+                      <span class="products__services-price">350<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Вызов врача на дом</span>
+                      <span class="products__services-price">1000<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Полная выписка из истории болезни</span>
+                      <span class="products__services-price">500<span>$</span></span>
+                    </li>
+                    <li class="products__services-item">
+                      <span class="products__services-name">Консультация по медицинским документам</span>
+                      <span class="products__services-price">500<span>$</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="products-all">
+        <div class="container">
+          <h2 class="products-all__title">Все услуги</h2>
+          <div class="products-all__inner">
+            <div class="swiper products-all__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a class="service products-all__sercive" href="#">
+                    <h3 class="service__name">Терапия</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="110">
+                      <use xlink:href="images/sprite.svg#therapy"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Хирургия</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="100" height="110">
+                      <use xlink:href="images/sprite.svg#surgery"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Неврология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="110">
+                      <use xlink:href="images/sprite.svg#neurology"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Ортопедия</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="110">
+                      <use xlink:href="images/sprite.svg#orthopedy"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Дерматология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="89" height="92" viewBox="0 0 89 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="path-1-outside-1_447_3533" maskUnits="userSpaceOnUse" x="0.149414" y="0.5" width="89"
+                        height="91" fill="black">
+                        <rect fill="white" x="0.149414" y="0.5" width="89" height="91" />
+                        <path
+                          d="M54.4494 37.2C61.5994 37.2 65.9994 26.75 65.9994 20.15C65.9994 14.65 63.2494 8.05 57.7494 8.05C50.5994 8.05 46.1994 18.5 46.1994 25.1C46.1994 30.6 48.9494 37.2 54.4494 37.2V37.2ZM33.5494 37.2C39.0494 37.2 41.7994 30.6 41.7994 25.1C41.7994 17.95 37.3994 7.5 30.2494 7.5C24.7494 7.5 21.9994 14.1 21.9994 19.6C21.4494 26.75 25.8494 37.2 33.5494 37.2V37.2ZM74.2494 31.7C67.0994 31.7 62.1494 41.6 62.1494 48.75C62.1494 53.7 64.3494 58.65 69.2994 58.65C76.4494 58.65 81.3994 48.75 81.3994 41.6C81.3994 36.65 78.6494 31.7 74.2494 31.7V31.7ZM26.3994 48.75C26.3994 41.6 20.8994 31.7 14.2994 31.7C9.34941 31.7 7.14941 36.65 7.14941 41.6C7.14941 48.75 12.6494 58.65 19.2494 58.65C24.1994 58.65 26.3994 53.7 26.3994 48.75ZM43.9994 47.65C32.9994 47.65 18.1494 65.25 18.1494 77.35C18.1494 82.85 21.9994 84.5 26.3994 84.5C32.9994 84.5 37.9494 80.1 43.9994 80.1C49.4994 80.1 54.4494 84.5 60.4994 84.5C64.8994 84.5 69.8494 83.4 69.8494 77.35C69.8494 65.25 54.9994 47.65 43.9994 47.65V47.65Z" />
+                      </mask>
+                      <path
+                        d="M54.4494 37.2C61.5994 37.2 65.9994 26.75 65.9994 20.15C65.9994 14.65 63.2494 8.05 57.7494 8.05C50.5994 8.05 46.1994 18.5 46.1994 25.1C46.1994 30.6 48.9494 37.2 54.4494 37.2V37.2ZM33.5494 37.2C39.0494 37.2 41.7994 30.6 41.7994 25.1C41.7994 17.95 37.3994 7.5 30.2494 7.5C24.7494 7.5 21.9994 14.1 21.9994 19.6C21.4494 26.75 25.8494 37.2 33.5494 37.2V37.2ZM74.2494 31.7C67.0994 31.7 62.1494 41.6 62.1494 48.75C62.1494 53.7 64.3494 58.65 69.2994 58.65C76.4494 58.65 81.3994 48.75 81.3994 41.6C81.3994 36.65 78.6494 31.7 74.2494 31.7V31.7ZM26.3994 48.75C26.3994 41.6 20.8994 31.7 14.2994 31.7C9.34941 31.7 7.14941 36.65 7.14941 41.6C7.14941 48.75 12.6494 58.65 19.2494 58.65C24.1994 58.65 26.3994 53.7 26.3994 48.75ZM43.9994 47.65C32.9994 47.65 18.1494 65.25 18.1494 77.35C18.1494 82.85 21.9994 84.5 26.3994 84.5C32.9994 84.5 37.9494 80.1 43.9994 80.1C49.4994 80.1 54.4494 84.5 60.4994 84.5C64.8994 84.5 69.8494 83.4 69.8494 77.35C69.8494 65.25 54.9994 47.65 43.9994 47.65V47.65Z"
+                        stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+                        mask="url(#path-1-outside-1_447_3533)" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Офтальмология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="110">
+                      <use xlink:href="images/sprite.svg#ophthalmology"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Кардиология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="126" height="110">
+                      <use xlink:href="images/sprite.svg#cardiology"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Стоматология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="125" height="110">
+                      <use xlink:href="images/sprite.svg#dentistry"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Репродуктология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="131" height="91">
+                      <use xlink:href="images/sprite.svg#reproduction"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Визуальная диагностика</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="97" height="110">
+                      <use xlink:href="images/sprite.svg#visual"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Лаборатория</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="110">
+                      <use xlink:href="images/sprite.svg#laboratory"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Онкология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="110">
+                      <use xlink:href="images/sprite.svg#oncology"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Эндокринология</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="140" height="110">
+                      <use xlink:href="images/sprite.svg#endocrine"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Экзотические животные</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="102">
+                      <use xlink:href="images/sprite.svg#eczotical"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Аптека</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="112" height="112" fill="#333333"/>
+                      <rect width="1920" height="8452" transform="translate(-1157 -2048)" fill="#FFFEFE"/>
+                      <g filter="url(#filter0_d_0_1)">
+                      <rect x="-185" y="-85" width="320" height="220" rx="20" fill="white"/>
+                      </g>
+                      <mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-185" y="-85" width="320" height="220">
+                      <rect x="-185" y="-85" width="320" height="220" rx="20" fill="#FFFEFE"/>
+                      </mask>
+                      <g mask="url(#mask0_0_1)">
+                      <mask id="path-3-outside-1_0_1" maskUnits="userSpaceOnUse" x="0" y="0" width="112" height="112" fill="black">
+                      <rect fill="white" width="112" height="112"/>
+                      <path d="M96.26 56.7526L102.499 50.5134C113.833 39.1797 113.834 20.8353 102.499 9.50062C91.1661 -1.83279 72.8215 -1.83429 61.4868 9.50062C59.0676 11.9193 11.6949 59.2925 9.50071 61.4867C-1.83292 72.8203 -1.83421 91.1647 9.50071 102.499C20.8339 113.833 39.1785 113.834 50.5132 102.499L56.7527 96.2602C61.7405 105.05 71.1852 110.993 81.9929 110.993C97.9837 110.993 110.993 97.9838 110.993 81.9931C110.993 71.1852 105.05 61.7404 96.26 56.7526ZM52.9925 81.9928C52.9925 84.7074 53.3685 87.3358 54.0691 89.8297L45.9564 97.9424C37.1416 106.757 22.8736 106.758 14.0577 97.9424C5.24294 89.1278 5.24165 74.8596 14.0577 66.0437L37.5756 42.5259L59.1699 64.12C55.3017 69.0488 52.9925 75.2562 52.9925 81.9928ZM78.7705 104.318C67.8541 102.749 59.437 93.3364 59.437 81.9928C59.437 70.6493 67.8541 61.2364 78.7705 59.668V104.318ZM63.684 59.5204L42.1324 37.9689L66.0436 14.0577C74.8584 5.24307 89.1264 5.24179 97.9423 14.0577C106.757 22.8723 106.758 37.1404 97.9423 45.9563L89.8296 54.069C87.3357 53.3682 84.7075 52.9924 81.9929 52.9924C75.0556 52.9924 68.6804 55.4423 63.684 59.5204ZM85.2151 104.318V59.6683C96.1316 61.2366 104.549 70.6495 104.549 81.9931C104.549 93.3364 96.1316 102.749 85.2151 104.318Z"/>
+                      </mask>
+                      <path d="M96.26 56.7526L102.499 50.5134C113.833 39.1797 113.834 20.8353 102.499 9.50062C91.1661 -1.83279 72.8215 -1.83429 61.4868 9.50062C59.0676 11.9193 11.6949 59.2925 9.50071 61.4867C-1.83292 72.8203 -1.83421 91.1647 9.50071 102.499C20.8339 113.833 39.1785 113.834 50.5132 102.499L56.7527 96.2602C61.7405 105.05 71.1852 110.993 81.9929 110.993C97.9837 110.993 110.993 97.9838 110.993 81.9931C110.993 71.1852 105.05 61.7404 96.26 56.7526ZM52.9925 81.9928C52.9925 84.7074 53.3685 87.3358 54.0691 89.8297L45.9564 97.9424C37.1416 106.757 22.8736 106.758 14.0577 97.9424C5.24294 89.1278 5.24165 74.8596 14.0577 66.0437L37.5756 42.5259L59.1699 64.12C55.3017 69.0488 52.9925 75.2562 52.9925 81.9928ZM78.7705 104.318C67.8541 102.749 59.437 93.3364 59.437 81.9928C59.437 70.6493 67.8541 61.2364 78.7705 59.668V104.318ZM63.684 59.5204L42.1324 37.9689L66.0436 14.0577C74.8584 5.24307 89.1264 5.24179 97.9423 14.0577C106.757 22.8723 106.758 37.1404 97.9423 45.9563L89.8296 54.069C87.3357 53.3682 84.7075 52.9924 81.9929 52.9924C75.0556 52.9924 68.6804 55.4423 63.684 59.5204ZM85.2151 104.318V59.6683C96.1316 61.2366 104.549 70.6495 104.549 81.9931C104.549 93.3364 96.1316 102.749 85.2151 104.318Z" />
+                      <path d="M96.26 56.7526L102.499 50.5134C113.833 39.1797 113.834 20.8353 102.499 9.50062C91.1661 -1.83279 72.8215 -1.83429 61.4868 9.50062C59.0676 11.9193 11.6949 59.2925 9.50071 61.4867C-1.83292 72.8203 -1.83421 91.1647 9.50071 102.499C20.8339 113.833 39.1785 113.834 50.5132 102.499L56.7527 96.2602C61.7405 105.05 71.1852 110.993 81.9929 110.993C97.9837 110.993 110.993 97.9838 110.993 81.9931C110.993 71.1852 105.05 61.7404 96.26 56.7526ZM52.9925 81.9928C52.9925 84.7074 53.3685 87.3358 54.0691 89.8297L45.9564 97.9424C37.1416 106.757 22.8736 106.758 14.0577 97.9424C5.24294 89.1278 5.24165 74.8596 14.0577 66.0437L37.5756 42.5259L59.1699 64.12C55.3017 69.0488 52.9925 75.2562 52.9925 81.9928ZM78.7705 104.318C67.8541 102.749 59.437 93.3364 59.437 81.9928C59.437 70.6493 67.8541 61.2364 78.7705 59.668V104.318ZM63.684 59.5204L42.1324 37.9689L66.0436 14.0577C74.8584 5.24307 89.1264 5.24179 97.9423 14.0577C106.757 22.8723 106.758 37.1404 97.9423 45.9563L89.8296 54.069C87.3357 53.3682 84.7075 52.9924 81.9929 52.9924C75.0556 52.9924 68.6804 55.4423 63.684 59.5204ZM85.2151 104.318V59.6683C96.1316 61.2366 104.549 70.6495 104.549 81.9931C104.549 93.3364 96.1316 102.749 85.2151 104.318Z" stroke="#FFC59E" stroke-width="2" mask="url(#path-3-outside-1_0_1)"/>
+                      </g>
+                      <defs>
+                      <filter id="filter0_d_0_1" x="-193" y="-93" width="340" height="240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dx="2" dy="2"/>
+                      <feGaussianBlur stdDeviation="5"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                      </filter>
+                      </defs>
+                      </svg>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="service" href="products-page.html">
+                    <h3 class="service__name">Груминг</h3>
+                    <span class="service__text">26 услуг</span>
+                    <svg class="service__icon products-all__icon" width="110" height="97">
+                      <use xlink:href="images/sprite.svg#grooming"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="slider-btn slider-btn--prev swiper-button-prev"></div>
+            <div class="slider-btn slider-btn--next swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <a class="logo footer__logo" href="index.html">
+          <div class="footer__logo-img">
+            <img class="logo__img" src="images/icon/logo.svg" alt="логотип" width="60" height="48">
+          </div>
+          <div class="footer__logo-inner">
+            <h2 class="footer__title">Айболит</h2>
+            <p class="footer__subtitle">ветеринарная клиника</p>
+          </div>
+        </a>
+        <nav class="footer__nav">
+          <span class="footer__info">Политика конфиденциальности в отношении обработки персональных данных</span>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="index.html">Главная</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="products-page.html">Услуги и цены</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="history.html">История компании</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="collective.html">Наши специалисты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Реквизиты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="design.html">Онлайн-оплата</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="doctor-page.html">Отзывы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="contacts-page.html">Контакты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Груминг-салон</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Косметика</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="news.html">Новости и акции</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="blog.html">Блог</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__right">
+        <div class="footer__shops shops">
+          <a class="shops__item" href="https://www.apple.com/app-store/">
+            <img class="shops__img" src="images/icon/app-store.svg" alt="app store" width="138" height="40">
+          </a>
+          <a class="shops__item" href="https://pay.google.com/">
+            <picture><source srcset="images/icon/google-play.avif" type="image/avif"><source srcset="images/icon/google-play.webp" type="image/webp"><img class="shops__img" src="images/icon/google-play.png" alt="google play" width="158" height="61"></picture>
+          </a>
+        </div>
+        <ul class="social footer__social">
+          <li class="social__item">
+            <a class="social__link" href="https://www.instagram.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#inst"></use>
+              </svg>
+              <span class="sr-only">ссылка на instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.facebook.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#fb"></use>
+              </svg>
+              <span class="sr-only">ссылка на facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+              <span class="sr-only">ссылка на vk</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
+              <span class="sr-only">ссылка на youtube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__emails">
+          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit@gmail.com</a>
+          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit34@gmail.com</a>
+        </div>
+        <div class="footer__text">
+          <span>Made with</span>
+          <picture><source srcset="images/icon/heart.avif" type="image/avif"><source srcset="images/icon/heart.webp" type="image/webp"><img src="images/icon/heart.png" alt="эмодзи сердецко"></picture>
+          <span>from UnitBean</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="popup" id="popup-city" >
+  <div class="popup__content">
+    <button class="popup__close" type="button">
+      <svg class="popup__close-img" width="20" height="20" >
+        <use xlink:href="images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+    <span class="popup__title">Ваш город</span>
+    <ul class="popup__items">
+      <li class="popup__item">
+        <button class="popup__btn">Волгоград</button>
+      </li>
+      <li class="popup__item">
+        <button class="popup__btn">Грозный</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
+
+  
+
+  
