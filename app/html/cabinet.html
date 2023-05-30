@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <title>Личный кабинет</title>
-
-</head>
-
-<body>
-  <div class="wrapper">
+@include('./components/head.html')
     @include('./components/header.html')
     <main class="main">
       <div class="cabinet">
@@ -244,10 +231,4 @@
       </div>
     </main>
     @include('./components/footer.html')
-    @include('./components/popup/city.html')
-    @include('./components/popup/auth.html')
-  </div>
-  <script src="js/main.min.js"></script>
-</body>
-
-</html>
+@include('./components/end.html')

@@ -1,1 +1,257 @@
-<!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8">  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="stylesheet" href="css/style.min.css">  <title>Cтраница для оформления заказа</title></head><body>  <div class="wrapper">    <header class="header">  <div class="big-container">    <nav class="header__nav">      <a class="logo header__logo" href="index.html">        <picture><source srcset="images/icon/logo.svg" type="image/webp"><img class="logo__img header__logo-img" src="images/icon/logo.svg" alt="логотип" width="79" height="63"></picture>      </a>      <div class="header__inner">        <ul class="menu header__menu">          <li class="menu__item">            <a class="menu__link" href="cabinet.html" id="authBtn">ЛИЧНЫЙ КАБИНЕТ</a>          </li>          <li class="menu__item menu__dropdown">            <button class="menu__link menu__dropdown-btn" type="button">О НАС</button>            <ul class="menu__dropdown-items">              <li class="menu__dropdown-item">                <a class="menu__dropdown-link" href="products-page.html">Услуги и цены</a>              </li>              <li class="menu__dropdown-item">                <a class="menu__dropdown-link" href="collective.html">Коллектив</a>              </li>              <li class="menu__dropdown-item">                <a class="menu__dropdown-link" href="history.html">История компании</a>              </li>            </ul>          </li>          <li class="menu__item">            <a class="menu__link" href="news.html">НОВОСТИ И АКЦИИ</a>          </li>          <li class="menu__item">            <a class="menu__link" href="contacts-page.html">КОНТАКТЫ</a>          </li>          <li class="menu__item">            <a class="menu__link" href="blog.html">БЛОГ</a>          </li>        </ul>        <button class="header__menu-close" type="button"></button>      </div>      <button class="header__btn" id="cityBtn">        <svg width="20" height="29">          <use xlink:href="images/sprite.svg#location"></use>        </svg>         <span class="header__btn-name">ВОЛГОГРАД</span>      </button>      <button class="header__menu-open" type="button">        <span></span>      </button>    </nav>  </div></header>    <main class="main">      <div class="breadcrumbs">          <div class="container">            <a class="link breadcrumbs__link" href="#">назад</a>          </div>      </div>      <section class="design">        <div class="container">          <div class="design__inner">            <h1 class="design__title">Оформление заказа</h1>            <form class="design__form" action="#">              <label class="design__label">                <input class="form-input" type="text" placeholder="ФИО" name="FIO" required>                <span class="sr-only">Введите вашу фамилию</span>              </label>              <div class="design__wrapper">                <div class="design__wrapper-item">                  <label class="phone design__label">                    <input class="phone__input form-input" type="text" name="phone" required>                    <span class="phone__placeholder"><span>+8 (</span>999) 999 99 99</span>                    <span class="sr-only">Введите ваш номер телефона</span>                  </label>                </div>                <div class="design__wrapper-item">                  <label class="design__label">                    <input class="form-input" type="text" name="date" placeholder="Желаемая дата и время приема" required>                    <span class="sr-only">Введите желаемую дату и время визита</span>                  </label>                </div>              </div>              <label class="sr-only" for="design__textarea">Краткое описание проблемы</label>              <textarea class="design__textarea" name="textarea" placeholder="Кратко опишите проблему" id="design__textarea" required></textarea>              <!-- <button class="order-link design__btn" type="submit">ЗАПИСАТЬСЯ</button> -->              <div class="pay">                <div class="pay__inner">                  <label class="pay__card">                    <input class="form-input pay__card-input" type="text" name="card" placeholder="Оплата банковской картой" required>                  </label>                  <div class="pay__captcha">                    <picture><source srcset="images/captcha.webp" type="image/webp"><img class="pay__captcha-img" src="images/captcha.jpg" alt="текст капчи" width="209" height="57"></picture>                    <label class="pay__captcha-lable">                      <input class="form-input pay__captcha-input" type="text" name="captcha" placeholder="Введите текст" required>                    </label>                  </div>                </div>                <p class="pay__text">                  Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей политика конфиденциальности.                </p>                <button class="order-link pay__btn" type="submit" disabled>ОПЛАТИТЬ</button>              </div>            </form>          </div>        </div>      </section>    </main>    <footer class="footer">  <div class="container">    <div class="footer__inner">      <div class="footer__left">        <a class="logo footer__logo" href="index.html">          <div class="footer__logo-img">            <picture><source srcset="images/icon/logo.svg" type="image/webp"><img class="logo__img" src="images/icon/logo.svg" alt="логотип" width="60" height="48"></picture>          </div>          <div class="footer__logo-inner">            <h2 class="footer__title">Айболит</h2>            <p class="footer__subtitle">ветеринарная клиника</p>          </div>        </a>        <nav class="footer__nav">          <span class="footer__info">Политика конфиденциальности в отношении обработки персональных данных</span>          <ul class="footer__menu">            <li class="footer__menu-item">              <a class="footer__menu-link" href="index.html">Главная</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="products-page.html">Услуги и цены</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="history.html">История компании</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="collective.html">Наши специалисты</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="#">Вакансии</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="#">Реквизиты</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="design.html">Онлайн-оплата</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="doctor-page.html">Отзывы</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="contacts-page.html">Контакты</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="#">Груминг-салон</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="#">Косметика</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="news.html">Новости и акции</a>            </li>            <li class="footer__menu-item">              <a class="footer__menu-link" href="blog.html">Блог</a>            </li>          </ul>        </nav>      </div>      <div class="footer__right">        <div class="footer__shops shops">          <a class="shops__item" href="https://www.apple.com/app-store/">            <picture><source srcset="images/icon/app-store.svg" type="image/webp"><img class="shops__img" src="images/icon/app-store.svg" alt="app store" width="138" height="40"></picture>          </a>          <a class="shops__item" href="https://pay.google.com/">            <picture><source srcset="images/icon/google-play.webp" type="image/webp"><img class="shops__img" src="images/icon/google-play.png" alt="google play" width="158" height="61"></picture>          </a>        </div>        <ul class="social footer__social">          <li class="social__item">            <a class="social__link" href="https://www.instagram.com/">              <svg>                <use xlink:href="images/sprite.svg#inst"></use>              </svg>              <span class="sr-only">ссылка на instagram</span>            </a>          </li>          <li class="social__item">            <a class="social__link" href="https://www.facebook.com/">              <svg>                <use xlink:href="images/sprite.svg#fb"></use>              </svg>              <span class="sr-only">ссылка на facebook</span>            </a>          </li>          <li class="social__item">            <a class="social__link" href="https://vk.com/">              <svg>                <use xlink:href="images/sprite.svg#vk"></use>              </svg>              <span class="sr-only">ссылка на vk</span>            </a>          </li>          <li class="social__item">            <a class="social__link" href="https://www.youtube.com/">              <svg>                <use xlink:href="images/sprite.svg#youtube"></use>              </svg>              <span class="sr-only">ссылка на youtube</span>            </a>          </li>        </ul>        <div class="footer__emails">          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit@gmail.com</a>          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit34@gmail.com</a>        </div>        <div class="footer__text">          <span>Made with</span>          <picture><source srcset="images/icon/heart.webp" type="image/webp"><img src="images/icon/heart.png" alt="эмодзи сердецко"></picture>          <span>from UnitBean</span>        </div>      </div>    </div>  </div></footer>    <div class="popup" id="popup-city" >  <div class="popup__content">    <button class="popup__close" type="button">      <svg class="popup__close-img" width="20" height="20" >        <use xlink:href="images/sprite.svg#close-btn"></use>      </svg>    </button>    <span class="popup__title">Ваш город</span>    <ul class="popup__items">      <li class="popup__item">        <button class="popup__btn">Волгоград</button>      </li>      <li class="popup__item">        <button class="popup__btn">Грозный</button>      </li>    </ul>  </div></div>    <div class="popup" id="auth-popup">  <div class="popup__content auth">    <button class="popup__close" type="button">      <svg class="popup__close-img" width="20" height="20">        <use xlink:href="images/sprite.svg#close-btn"></use>      </svg>    </button>    <span class="popup__title auth__title">Вход или регистрация</span>    <form class="auth__form" action="#">      <!-- <label class="phone auth__lable">        <input class="phone__input" required type="text">        <span class="phone__placeholder"><span>+8 (</span>999) 999 99 99</span>        <span class="sr-only">Введите ваш номер телефона</span>      </label>      <button class="order-link auth__btn" type="button">ДАЛЕЕ</button> -->      <div class="auth__code">        <label class="auth__code-lable">          <input class="auth__code-input" type="text" name="num-1" required>        </label>        <label class="auth__code-lable">          <input class="auth__code-input" type="text" name="num-2" required>        </label>        <label class="auth__code-lable">          <input class="auth__code-input" type="text" name="num-3" required>        </label>        <label class="auth__code-lable">          <input class="auth__code-input" type="text" name="num-4" required>        </label>      </div>      <span class="auth__timer" id="timer-auth">00:59</span>      <button class="order-link auth__btn" type="submit" disabled>ГОТОВО</button>      <button class="auth__btn-back" type="button">НАЗАД</button>    </form>    <!-- <a class="auth__link" href="#">ПРОДОЛЖИТЬ БЕЗ РЕГИСТРАЦИИ</a> -->  </div></div>  </div>  <script src="js/main.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Блог с новостями</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="big-container">
+    <nav class="header__nav">
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__img header__logo-img" src="images/icon/logo.svg" alt="логотип" width="79" height="63">
+      </a>
+      <div class="header__inner">
+        <ul class="menu header__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="cabinet.html" id="authBtn">ЛИЧНЫЙ КАБИНЕТ</a>
+          </li>
+          <li class="menu__item menu__dropdown">
+            <button class="menu__link menu__dropdown-btn" type="button">О НАС</button>
+            <ul class="menu__dropdown-items">
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="products-page.html">Услуги и цены</a>
+              </li>
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="collective.html">Коллектив</a>
+              </li>
+              <li class="menu__dropdown-item">
+                <a class="menu__dropdown-link" href="history.html">История компании</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="news.html">НОВОСТИ И АКЦИИ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="contacts-page.html">КОНТАКТЫ</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="blog.html">БЛОГ</a>
+          </li>
+        </ul>
+        <button class="header__menu-close" type="button"></button>
+      </div>
+      <button class="header__btn" id="cityBtn">
+        <svg width="20" height="29">
+          <use xlink:href="images/sprite.svg#location"></use>
+        </svg> 
+        <span class="header__btn-name">ВОЛГОГРАД</span>
+      </button>
+      <button class="header__menu-open" type="button">
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+    <main class="main">
+      <div class="breadcrumbs">
+          <div class="container">
+            <a class="link breadcrumbs__link" href="#">назад</a>
+          </div>
+      </div>
+      <section class="design">
+        <div class="container">
+          <div class="design__inner">
+            <h1 class="design__title">Оформление заказа</h1>
+            <form class="design__form" action="#">
+              <label class="design__label">
+                <input class="form-input" type="text" placeholder="ФИО" name="FIO" required>
+                <span class="sr-only">Введите вашу фамилию</span>
+              </label>
+              <div class="design__wrapper">
+                <div class="design__wrapper-item">
+                  <label class="phone design__label">
+                    <input class="phone__input form-input" type="text" name="phone" required>
+                    <span class="phone__placeholder"><span>+8 (</span>999) 999 99 99</span>
+                    <span class="sr-only">Введите ваш номер телефона</span>
+                  </label>
+                </div>
+                <div class="design__wrapper-item">
+                  <label class="design__label">
+                    <input class="form-input" type="text" name="date" placeholder="Желаемая дата и время приема" required>
+                    <span class="sr-only">Введите желаемую дату и время визита</span>
+                  </label>
+                </div>
+              </div>
+              <label class="sr-only" for="design__textarea">Краткое описание проблемы</label>
+              <textarea class="design__textarea" name="textarea" placeholder="Кратко опишите проблему" id="design__textarea" required></textarea>
+              <!-- <button class="order-link design__btn" type="submit">ЗАПИСАТЬСЯ</button> -->
+              <div class="pay">
+                <div class="pay__inner">
+                  <label class="pay__card">
+                    <input class="form-input pay__card-input" type="text" name="card" placeholder="Оплата банковской картой" required>
+                  </label>
+                  <div class="pay__captcha">
+                    <picture><source srcset="images/captcha.avif" type="image/avif"><source srcset="images/captcha.webp" type="image/webp"><img class="pay__captcha-img" src="images/captcha.jpg" alt="текст капчи" width="209" height="57"></picture>
+                    <label class="pay__captcha-lable">
+                      <input class="form-input pay__captcha-input" type="text" name="captcha" placeholder="Введите текст" required>
+                    </label>
+                  </div>
+                </div>
+                <p class="pay__text">
+                  Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей политика конфиденциальности.
+                </p>
+                <button class="order-link pay__btn" type="submit" disabled>ОПЛАТИТЬ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <a class="logo footer__logo" href="index.html">
+          <div class="footer__logo-img">
+            <img class="logo__img" src="images/icon/logo.svg" alt="логотип" width="60" height="48">
+          </div>
+          <div class="footer__logo-inner">
+            <h2 class="footer__title">Айболит</h2>
+            <p class="footer__subtitle">ветеринарная клиника</p>
+          </div>
+        </a>
+        <nav class="footer__nav">
+          <span class="footer__info">Политика конфиденциальности в отношении обработки персональных данных</span>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="index.html">Главная</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="products-page.html">Услуги и цены</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="history.html">История компании</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="collective.html">Наши специалисты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Реквизиты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="design.html">Онлайн-оплата</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="doctor-page.html">Отзывы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="contacts-page.html">Контакты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Груминг-салон</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Косметика</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="news.html">Новости и акции</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="blog.html">Блог</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__right">
+        <div class="footer__shops shops">
+          <a class="shops__item" href="https://www.apple.com/app-store/">
+            <img class="shops__img" src="images/icon/app-store.svg" alt="app store" width="138" height="40">
+          </a>
+          <a class="shops__item" href="https://pay.google.com/">
+            <picture><source srcset="images/icon/google-play.avif" type="image/avif"><source srcset="images/icon/google-play.webp" type="image/webp"><img class="shops__img" src="images/icon/google-play.png" alt="google play" width="158" height="61"></picture>
+          </a>
+        </div>
+        <ul class="social footer__social">
+          <li class="social__item">
+            <a class="social__link" href="https://www.instagram.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#inst"></use>
+              </svg>
+              <span class="sr-only">ссылка на instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.facebook.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#fb"></use>
+              </svg>
+              <span class="sr-only">ссылка на facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+              <span class="sr-only">ссылка на vk</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/">
+              <svg>
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
+              <span class="sr-only">ссылка на youtube</span>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__emails">
+          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit@gmail.com</a>
+          <a class="footer__email" href="mailto:aibolit34@gmail.com">aibolit34@gmail.com</a>
+        </div>
+        <div class="footer__text">
+          <span>Made with</span>
+          <picture><source srcset="images/icon/heart.avif" type="image/avif"><source srcset="images/icon/heart.webp" type="image/webp"><img src="images/icon/heart.png" alt="эмодзи сердецко"></picture>
+          <span>from UnitBean</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="popup" id="popup-city" >
+  <div class="popup__content">
+    <button class="popup__close" type="button">
+      <svg class="popup__close-img" width="20" height="20" >
+        <use xlink:href="images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+    <span class="popup__title">Ваш город</span>
+    <ul class="popup__items">
+      <li class="popup__item">
+        <button class="popup__btn">Волгоград</button>
+      </li>
+      <li class="popup__item">
+        <button class="popup__btn">Грозный</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
