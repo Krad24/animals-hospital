@@ -150,6 +150,7 @@ function build(){
         'app/*.html',
         'app/css/style.min.css',
         'app/js/main.min.js',
+        'app/images/**/*.*',
         'app/fonts/*.*',
     ], {base: 'app'})
     .pipe(dest('dist'))
